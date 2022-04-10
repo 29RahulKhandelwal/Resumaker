@@ -6,7 +6,7 @@ export default function App() {
     return (
         <Fragment>
             <Header />        
-            <Home />
+            {/* <Home /> */}
         </Fragment>
     )
 }
