@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.img{
+    height: 3%;
+    width: 3%;
+}
+.container-fluid{
+    margin-left: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .img {
+        height: 10%;
+        width: 10%;
+    }
+  }
