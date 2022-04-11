@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Header from "./HeaderFooter/Header";
 import Home from "../components/HomePage/Home";
 import TemplatePage from "./TemplatePage/TemplatePage";
+import Footer from "./HeaderFooter/Footer";
 
 export default function App() {
     return (
@@ -9,6 +10,7 @@ export default function App() {
             <Header />        
             <Home />
             <TemplatePage />
+            <Footer />
         </Fragment>
     )
 }
