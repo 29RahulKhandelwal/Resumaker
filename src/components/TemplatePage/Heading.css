@@ -1,0 +1,22 @@
+body{
+    font-family: "Open Sans", sans-serif;
+}
+h3{
+    margin-top: 115px;
+    color: black;
+    text-align: center;
+}
+.text-muted{
+    font-size: 15px;
+    font-weight: bold;
+}
+hr{
+    width: 300px;
+    margin: 0px auto;
+    margin-top: 5px;
+}
+@media only screen and (max-width: 600px) {
+    h3{
+        margin-top: 135px;
+    }
+}
