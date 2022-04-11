@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer(){
     return (
         <div className="footer">
-            <p>Created By Rahul Khandelwal</p>
+            <p className="footer-para">Created By Rahul Khandelwal</p>
         </div>
     )
 }
