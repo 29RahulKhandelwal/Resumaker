@@ -1,0 +1,16 @@
+.card-col{
+    margin: 10px 0px;
+}
+.para-text{
+    color: black;
+    text-align: center;
+    font-family: cursive;
+}
+.resume-img{
+    height: 370px;
+}
+@media only screen and (max-width: 600px) {
+    .card{
+        margin: 0px auto;
+    }
+  }
