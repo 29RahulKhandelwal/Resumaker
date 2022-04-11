@@ -1,5 +1,10 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    max-width: 100%;
+}
 .card-col{
     margin: 10px 0px;
+    text-align: -webkit-center;
 }
 .para-text{
     color: black;
@@ -9,8 +14,28 @@
 .resume-img{
     height: 370px;
 }
-@media only screen and (max-width: 600px) {
-    .card{
+h6{
+    padding: 0px 22px;
+    text-align: center;
+}
+.scroll-bar{
+    overflow-y: scroll;
+    height: 600px;
+}
+@media (min-width:767px) and (max-width:1180px) {
+    .template-img{
+        margin: 0px -110px;
+    }
+    h3{
+        margin-top: 140px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .template-img{
         margin: 0px auto;
     }
+    h3{
+        margin-top: 140px;
+    } 
   }
