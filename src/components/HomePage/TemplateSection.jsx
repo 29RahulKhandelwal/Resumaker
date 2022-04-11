@@ -1,10 +1,10 @@
 import React from "react";
-import Image from "./Image";
-import resumeTemplate1 from "../assets/resumeTemplate1.png";
-import resumeTemplate2 from "../assets/resumeTemplate2.png";
-import resumeTemplate3 from "../assets/resumeTemplate3.png";
-import resumeTemplate4 from "../assets/resumeTemplate4.png";
-import resumeTemplate5 from "../assets/resumeTemplate5.png";
+import Image from "../UI/Image";
+import resumeTemplate1 from "../../assets/resumeTemplate1.png";
+import resumeTemplate2 from "../../assets/resumeTemplate2.png";
+import resumeTemplate3 from "../../assets/resumeTemplate3.png";
+import resumeTemplate4 from "../../assets/resumeTemplate4.png";
+import resumeTemplate5 from "../../assets/resumeTemplate5.png";
 
 export default function TemplateSection(){
     return (

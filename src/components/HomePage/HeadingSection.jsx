@@ -1,6 +1,6 @@
 import React from "react";
-import checkmark from "../assets/check-mark.png";
-import arrow from "../assets/arrow.png";
+import checkmark from "../../assets/check-mark.png";
+import arrow from "../../assets/arrow.png";
 export default function HeadingSection(){
     return (
         <div className="col-lg-4 col-md-12 first-row">
