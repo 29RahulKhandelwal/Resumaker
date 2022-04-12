@@ -14,8 +14,10 @@ export default function EducationForm(){
             <Input label="CGPA" id="CGPA" text="CGPA" type="number" placeholder="8.1" />
             <Input label="StartDate" id="StartDate" text="Start Date" type="text" placeholder="Sep 2018" />
             <Input label="EndDate" id="End Date" text="EndDate" type="text" placeholder="Jun 2022" />
-            <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add School" />
-            <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove School" />
+            <div className="addremove">
+                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add School" />
+                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove School" />
+            </div>
         </Fragment>
     )
 }

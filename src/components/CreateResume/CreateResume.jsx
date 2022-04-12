@@ -5,6 +5,7 @@ import Education from "./Education";
 import Profile from "./Profile";
 import SideLinks from "./SideLinks";
 import Template from "./Template";
+import Work from "./Work";
 
 export default function CreateResume() {
     return (
@@ -17,7 +18,9 @@ export default function CreateResume() {
                 <div class="col col-lg-5 col-md-12 col-border scroll-bar">
                     {/* <Template /> */}
                     {/* <Profile /> */}
-                    <Education />
+                    {/* <Education /> */}
+                    {/* <Work /> */}
+                    
 
                 </div>
                 <div class="col col-lg-6 col-border col-display">
