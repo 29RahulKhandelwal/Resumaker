@@ -16,12 +16,12 @@ export default function WorkForm(){
             <Input label="EndDate" id="End Date" text="EndDate" type="text" placeholder="Jun 2022" />
             <ShortInput label="JobResponsibilty" id="JobResponsibilty" text="Job Responsibilty" type="text" placeholder="Did cool stuff at company" />
             <div className="circle">
-                <CircleButton type="button" class="btn btn-center btn-outline-primary btn-md btn-circle" text="+"  />
-                <CircleButton type="button" class="btn btn-center btn-outline-primary btn-md btn-circle" text="-"  />
+                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+"  />
+                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-"  />
             </div>
             <div className="addremove">
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add Job" />
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove Job" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Job" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Job" />
             </div>
         </Fragment>
     )

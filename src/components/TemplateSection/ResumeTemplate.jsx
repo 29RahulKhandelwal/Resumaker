@@ -6,7 +6,9 @@ export default function ResumeTemplate() {
     return (
         <Fragment>
             <ResumeTemplateCard />
-            <Button type="button" class="btn btn-center btn-outline-primary btn-lg" text="CREATE MY RESUME" />
+            <a href="/resume-generator/templates">
+                <Button type="button" class="btn btn-center btn-outline-primary btn-lg" text="CREATE MY RESUME" />
+            </a>
         </Fragment>
     )
 }

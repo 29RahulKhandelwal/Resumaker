@@ -14,7 +14,7 @@ export default function CreateResumeTemplateCard(props) {
                     <div className="card" style={{width: '16.5rem'}}>
                         <img src={ResumeTemplate1} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
-                            <p className="card-text para-text">Template 1</p>
+                            <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 1</button>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ export default function CreateResumeTemplateCard(props) {
                     <div className="card" style={{width: '16.5rem'}}>
                         <img src={ResumeTemplate2} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
-                            <p className="card-text para-text">Template 2</p>
+                            <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 2</button>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export default function CreateResumeTemplateCard(props) {
                     <div className="card" style={{width: '16.5rem'}}>
                         <img src={ResumeTemplate3} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
-                            <p className="card-text para-text">Template 3</p>
+                            <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 3</button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ export default function CreateResumeTemplateCard(props) {
                     <div className="card" style={{width: '16.5rem'}}>
                         <img src={ResumeTemplate4} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
-                            <p className="card-text para-text">Template 4</p>
+                            <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 4</button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ export default function CreateResumeTemplateCard(props) {
                     <div className="card" style={{width: '16.5rem'}}>
                         <img src={ResumeTemplate5} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
-                            <p className="card-text para-text">Template 5</p>
+                            <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 5</button>
                         </div>
                     </div>
                 </div>

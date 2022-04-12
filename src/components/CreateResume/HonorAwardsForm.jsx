@@ -14,8 +14,8 @@ export default function HonorAwardsForm(){
             <Input label="Awarder" id="Awarder" text="Awarder" type="text" placeholder="DevTeam" />
             <Input label="Summary" id="Summary" text="Summary" type="text" placeholder="Created Best Application for that case." />
             <div className="addremove">
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add Skill" />
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove Skill" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Skill" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Skill" />
             </div>
         </Fragment>
     )

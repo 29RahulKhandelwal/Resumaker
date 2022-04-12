@@ -14,12 +14,12 @@ export default function ProjectForm(){
             <Input label="LinkToProject" id="LinkToProject" text="Link To Project" type="email" placeholder="http://resumaker.com" />
             <ShortInput label="LanguagesUsed" id="LanguagesUsed" text="Languages Used" type="text" placeholder="Javascript" />
             <div className="circle">
-                <CircleButton type="button" class="btn btn-center btn-outline-primary btn-md btn-circle" text="+"  />
-                <CircleButton type="button" class="btn btn-center btn-outline-primary btn-md btn-circle" text="-"  />
+                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+"  />
+                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-"  />
             </div>
             <div className="addremove">
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add Skill" />
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove Skill" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Skill" />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Skill" />
             </div>
         </Fragment>
     )
