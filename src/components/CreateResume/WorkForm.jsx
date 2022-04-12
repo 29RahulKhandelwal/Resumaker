@@ -20,8 +20,8 @@ export default function WorkForm(){
                 <CircleButton type="button" class="btn btn-center btn-outline-primary btn-md btn-circle" text="-"  />
             </div>
             <div className="addremove">
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add School" />
-                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove School" />
+                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Add Job" />
+                <Button type="button" class="btn btn-center btn-outline-primary btn-md btn-school" text="Remove Job" />
             </div>
         </Fragment>
     )

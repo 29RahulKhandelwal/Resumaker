@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Heading from "../UI/Heading";
-import SkillsForm from "./WorkForm";
+import SkillsForm from "./SkillsForm";
 
 export default function Skills(){
     return (

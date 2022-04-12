@@ -2,8 +2,11 @@ import React, { Fragment } from "react";
 import Button from "../UI/Button";
 import "./CreateResume.css";
 import Education from "./Education";
+import HonorAwards from "./HonorAwards";
 import Profile from "./Profile";
+import Project from "./Project";
 import SideLinks from "./SideLinks";
+import Skills from "./Skills";
 import Template from "./Template";
 import Work from "./Work";
 
@@ -20,7 +23,9 @@ export default function CreateResume() {
                     {/* <Profile /> */}
                     {/* <Education /> */}
                     {/* <Work /> */}
-                    
+                    {/* <Skills /> */}
+                    {/* <Project /> */}
+                    <HonorAwards />
 
                 </div>
                 <div class="col col-lg-6 col-border col-display">
