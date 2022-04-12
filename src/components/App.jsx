@@ -19,11 +19,11 @@ export default function App() {
             <Header />
             {window.location.pathname === "/" ? <HomePage /> : (
             <div className="main">
-                <div class="row">
-                    <div class="col col-lg-1 col-border col-display">
+                <div className="row">
+                    <div className="col col-lg-1 col-border col-display">
                         <SideLinks />
                     </div>
-                    <div class="col col-lg-5 col-md-12 col-border scroll-bar">
+                    <div className="col col-lg-5 col-md-12 col-border scroll-bar">
                     <Routes>
                         <Route exact path="/resume-generator/templates" element={<Template />} />
                         <Route exact path="/resume-generator/profile" element={<Profile/>} />
@@ -34,7 +34,7 @@ export default function App() {
                         <Route exact path="/resume-generator/awards" element={<HonorAwards/>} />
                     </Routes>
                     </div>
-                    <div class="col col-lg-6 col-border col-display">
+                    <div className="col col-lg-6 col-border col-display">
                     </div>
                     <ResumeFooter />
                 </div>

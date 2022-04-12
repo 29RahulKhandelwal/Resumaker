@@ -6,7 +6,7 @@ import TemplateSection from "./TemplateSection";
 export default function Home() {
     return (
         <div className="container">
-            <div class="row">
+            <div className="row">
                 <HeadingSection />
                 <TemplateSection />
             </div>

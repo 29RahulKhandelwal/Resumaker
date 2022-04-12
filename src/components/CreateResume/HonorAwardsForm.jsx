@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import Button from "../UI/Button";
-import CircleButton from "../UI/CircleButton";
 import Input from "../UI/Input";
-import ShortInput from "../UI/ShortInput";
 
 
 export default function HonorAwardsForm(){

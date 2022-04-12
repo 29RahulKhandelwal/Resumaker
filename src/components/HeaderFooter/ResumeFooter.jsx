@@ -2,6 +2,7 @@ import React from "react";
 import "./ResumeFooter.css";
 
 export default function ResumeFooter(){
+    console.log(window.location.pathname);
     return (
         <div className="resume-footer">
             <button type="button" class="btn btn-outline-info btn-sm prev-btn create-button" >Prev</button>
