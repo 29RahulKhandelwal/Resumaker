@@ -1,6 +1,9 @@
 body{
     font-family: "Open Sans", sans-serif;
 }
+.col-display{
+    margin-top: 26px;
+}
 .side-links{
     display: block;
     padding: 3px 5px;
@@ -40,3 +43,12 @@ h6{
     border-radius: 10px;
     margin: 0px 50px;
 }
+
+@media (min-width: 480px) and (max-width: 1180px) {
+    .col-display{
+        display: none;
+    }
+    body{
+        height: 99%;
+    }
+  }
