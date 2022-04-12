@@ -50,6 +50,13 @@ h6{
     color: black;
 }
 
+.text-center{
+    display: inline-block;
+}
+.btn-school{
+    width: auto;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;

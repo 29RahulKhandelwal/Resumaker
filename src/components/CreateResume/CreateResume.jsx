@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Button from "../UI/Button";
 import "./CreateResume.css";
+import Education from "./Education";
 import Profile from "./Profile";
 import SideLinks from "./SideLinks";
 import Template from "./Template";
@@ -15,7 +16,9 @@ export default function CreateResume() {
                 </div>
                 <div class="col col-lg-5 col-md-12 col-border scroll-bar">
                     {/* <Template /> */}
-                    <Profile />
+                    {/* <Profile /> */}
+                    <Education />
+
                 </div>
                 <div class="col col-lg-6 col-border col-display">
                     Column
