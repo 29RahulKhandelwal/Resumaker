@@ -7,7 +7,7 @@ import ShortInput from "../UI/ShortInput";
 
 export default function SkillsForm(){
     const [skillsData,setSkillsData]=useState({
-        sectionHeading:"",
+        skillSectionHeading:"",
         skillName:"",
         skillDetails:""
     });
@@ -25,7 +25,7 @@ export default function SkillsForm(){
 
     return (
         <Fragment>
-            <Input label="SectionHeading" id="SectionHeading" text="Section Heading" type="text" name="sectionHeading" value={skillsData.sectionHeading} onChange={handleChange} placeholder="Skills" />
+            <Input label="skillSectionHeading" id="skillSectionHeading" text="Section Heading" type="text" name="sectionHeading" value={skillsData.skillSectionHeading} onChange={handleChange} placeholder="Skills" />
             <Input label="SkillName" id="SkillName" text="Skill Name" type="text" name="skillName" value={skillsData.skillName} onChange={handleChange} placeholder="Programming language, Frameworks, etc" />
             <ShortInput label="SkillDetails" id="SkillDetails" text="Skill Details" type="text" name="skillDetails" value={skillsData.skillDetails} onChange={handleChange} placeholder="Javascript" />
             <div className="circle">

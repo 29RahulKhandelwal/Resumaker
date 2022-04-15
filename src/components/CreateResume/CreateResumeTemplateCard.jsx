@@ -1,10 +1,10 @@
 import React from "react";
 import "./CreateResumeTemplateCard.css";
-import ResumeTemplate1 from "../../assets/resumeTemplate1.png";
-import ResumeTemplate2 from "../../assets/resumeTemplate2.png";
-import ResumeTemplate3 from "../../assets/resumeTemplate3.png";
-import ResumeTemplate4 from "../../assets/resumeTemplate4.png";
-import ResumeTemplate5 from "../../assets/resumeTemplate5.png";
+import resumeTemplate1 from "../../assets/resumeTemplate1.png";
+import resumeTemplate2 from "../../assets/resumeTemplate2.png";
+import resumeTemplate3 from "../../assets/resumeTemplate3.png";
+import resumeTemplate4 from "../../assets/resumeTemplate4.png";
+import resumeTemplate5 from "../../assets/resumeTemplate5.png";
 import { Link } from "react-router-dom";
 
 export default function CreateResumeTemplateCard(props) {
@@ -13,7 +13,7 @@ export default function CreateResumeTemplateCard(props) {
             <div class="row">
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card" style={{width: '16.5rem'}}>
-                        <img src={ResumeTemplate1} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate1} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 1</button>
@@ -23,7 +23,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card" style={{width: '16.5rem'}}>
-                        <img src={ResumeTemplate2} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate2} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                         <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 2</button>
@@ -33,7 +33,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card" style={{width: '16.5rem'}}>
-                        <img src={ResumeTemplate3} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate3} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 3</button>
@@ -43,7 +43,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card" style={{width: '16.5rem'}}>
-                        <img src={ResumeTemplate4} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate4} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 4</button>
@@ -53,7 +53,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card" style={{width: '16.5rem'}}>
-                        <img src={ResumeTemplate5} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate5} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 5</button>

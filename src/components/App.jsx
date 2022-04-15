@@ -11,7 +11,7 @@ import ResumeFooter from "./HeaderFooter/ResumeFooter";
 import Work from "./CreateResume/Work";
 import Skills from "./CreateResume/Skills";
 import Project from "./CreateResume/Project";
-import HonorAwards from "./CreateResume/HonorAwards";
+// import HonorAwards from "./CreateResume/HonorAwards";
 
 export default function App() {
     return (
@@ -31,7 +31,7 @@ export default function App() {
                         <Route exact path="/resume-generator/work" element={<Work/>} />
                         <Route exact path="/resume-generator/skills" element={<Skills/>} />
                         <Route exact path="/resume-generator/projects" element={<Project/>} />
-                        <Route exact path="/resume-generator/awards" element={<HonorAwards/>} />
+                        {/* <Route exact path="/resume-generator/awards" element={<HonorAwards/>} /> */}
                     </Routes>
                     </div>
                     <div className="col col-lg-6 col-border col-display">

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ResumeFooter.css";
-const paths=["templates","profile","education","work","skills","projects","awards"];
+const paths=["templates","profile","education","work","skills","projects"];
 
 export default function ResumeFooter(){
     const [progressValue,setProgressValue]=useState(0);
@@ -17,10 +17,10 @@ export default function ResumeFooter(){
         }
     }
     const prevPath=()=>{
-        changePath(-1,-17)
+        changePath(-1,-20)
     }
     const nextPath=()=>{
-        changePath(1,17)
+        changePath(1,20)
     }
 
     useEffect(()=>setPath(window.location.pathname.split("/").pop()),[])

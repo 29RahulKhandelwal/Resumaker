@@ -7,7 +7,7 @@ import ShortInput from "../UI/ShortInput";
 
 export default function WorkForm(){
     const [workData,setWorkData]=useState({
-        sectionHeading:"",
+        workSectionHeading:"",
         companyName:"",
         jobTitle:"",
         jobLocation:"",
@@ -29,7 +29,7 @@ export default function WorkForm(){
 
     return (
         <Fragment>
-            <Input label="SectionHeading" id="SectionHeading" text="Section Heading" type="text" name="sectionHeading" value={workData.sectionHeading} onChange={handleChange} placeholder="Education" />
+            <Input label="workSectionHeading" id="workSectionHeading" text="Section Heading" type="text" name="sectionHeading" value={workData.workSectionHeading} onChange={handleChange} placeholder="Education" />
             <Input label="CompanyName" id="CompanyName" text="Company Name" type="text" name="companyName" value={workData.companyName} onChange={handleChange} placeholder="MICROSOFT" />
             <Input label="JobTitle" id="JobTitle" text="JobTitle" type="text" name="jobTitle" value={workData.jobTitle} onChange={handleChange} placeholder="Software Engineer" />
             <Input label="JobLocation" id="JobLocation" text="Job Location" type="text" name="jobLocation" value={workData.jobLocation} onChange={handleChange} placeholder="Stanford, CA" />

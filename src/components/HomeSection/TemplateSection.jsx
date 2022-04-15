@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "../UI/Image";
-import resumeTemplate1 from "../../assets/resumeTemplate1.png";
-import resumeTemplate2 from "../../assets/resumeTemplate2.png";
-import resumeTemplate3 from "../../assets/resumeTemplate3.png";
-import resumeTemplate4 from "../../assets/resumeTemplate4.png";
-import resumeTemplate5 from "../../assets/resumeTemplate5.png";
+import Img1 from "../../assets/Img1.png";
+import Img2 from "../../assets/Img2.png";
+import Img3 from "../../assets/Img3.png";
+import Img4 from "../../assets/Img4.png";
+import Img5 from "../../assets/Img5.png";
 
 export default function TemplateSection(){
     return (
         <div class="col-lg-8 template-img">
-            <Image className="first-template " src={resumeTemplate2} alt="resume-pic" />
-            <Image className="second-template" src={resumeTemplate1} alt="resume-pic" />
-            <Image className="third-template" src={resumeTemplate3} alt="resume-pic" />
-            <Image className="four-template" src={resumeTemplate4} alt="resume-pic" />
-            <Image className="five-template " src={resumeTemplate5} alt="resume-pic" />
+            <Image className="first-template " src={Img2} alt="resume-pic" />
+            <Image className="second-template" src={Img1} alt="resume-pic" />
+            <Image className="third-template" src={Img3} alt="resume-pic" />
+            <Image className="four-template" src={Img4} alt="resume-pic" />
+            <Image className="five-template " src={Img5} alt="resume-pic" />
         </div>
     )
 }

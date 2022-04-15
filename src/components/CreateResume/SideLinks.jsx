@@ -24,9 +24,9 @@ export default function SideLinks(){
             <Link to="/resume-generator/projects">
             <AnchorTag class="link-info side-links" text="Projects" />
             </Link>
-            <Link to="/resume-generator/awards">
+            {/* <Link to="/resume-generator/awards">
             <AnchorTag class="link-info side-links" text="Awards" />
-            </Link>
+            </Link> */}
             <Button type="button" class="btn btn-outline-primary btn-md create-button" text="MAKE" />
         </Fragment>
     )
