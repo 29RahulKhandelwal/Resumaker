@@ -90,6 +90,8 @@ a{
 .addremove{
     display: inline-flex;
     margin: 10px 70px;
+    width: 75%;
+    justify-content: center;
 }
 
 input::-webkit-outer-spin-button,

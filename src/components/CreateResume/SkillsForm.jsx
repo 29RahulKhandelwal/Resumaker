@@ -1,41 +1,40 @@
 import React, { Fragment, useState } from "react";
-import Button from "../UI/Button";
 import CircleButton from "../UI/CircleButton";
-import Input from "../UI/Input";
 import ShortInput from "../UI/ShortInput";
 
 
 export default function SkillsForm(){
-    const [skillsData,setSkillsData]=useState({
-        skillSectionHeading:"",
-        skillName:"",
-        skillDetails:""
-    });
-    function handleChange(event){
+    const [skillNameData,setSkillNameData]=useState([{
+        skillName:""
+    }]);
+    function handleChange(event,index){
         const {name,value}=event.target;
-        setSkillsData(prevData=>{
-            return {
-                ...prevData,
-                [name]:value
-            }
-        })
+        const SkillList=[...skillNameData];
+        SkillList[index][name]=value;
+        setSkillNameData(SkillList);
+    }
+    function handleSkillAdd(){
+        setSkillNameData([...skillNameData,{skillName:""}]);
+    }
+    function handleSkillDelete(index){
+        const SkillList=[...skillNameData];
+        SkillList.splice(index,1);
+        setSkillNameData(SkillList);
     }
 
-    console.log(skillsData);
+    console.log(skillNameData);
 
     return (
         <Fragment>
-            <Input label="skillSectionHeading" id="skillSectionHeading" text="Section Heading" type="text" name="sectionHeading" value={skillsData.skillSectionHeading} onChange={handleChange} placeholder="Skills" />
-            <Input label="SkillName" id="SkillName" text="Skill Name" type="text" name="skillName" value={skillsData.skillName} onChange={handleChange} placeholder="Programming language, Frameworks, etc" />
-            <ShortInput label="SkillDetails" id="SkillDetails" text="Skill Details" type="text" name="skillDetails" value={skillsData.skillDetails} onChange={handleChange} placeholder="Javascript" />
-            <div className="circle">
-                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+"  />
-                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-"  />
-            </div>
-            <div className="addremove">
-                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Skill" />
-                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Skill" />
-            </div>
+            {skillNameData.map((skill,index)=>(
+                <div key={index}>
+                    <ShortInput label="SkillName" id="SkillName" text="Skill Name" type="text" name="skillName" value={skill.skillName}  onChange={(e)=>handleChange(e,index)} placeholder="Javascript" />
+                    <div className="circle">
+                        {skillNameData.length -1 === index && skillNameData.length < 10 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+" onClick={handleSkillAdd}  />}
+                        {skillNameData.length > 1 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-" onClick={handleSkillDelete} />}
+                    </div>
+                </div>
+            ))}
         </Fragment>
     )   
 }
