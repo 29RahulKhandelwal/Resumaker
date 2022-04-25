@@ -16,7 +16,7 @@ export default function CreateResumeTemplateCard(props) {
                         <img src={resumeTemplate1} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
-                                <button className="btn btn-outline-primary btn-md create-button para-text template-button">Template 1</button>
+                                <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>localStorage.setItem("template","Template1")}>Template 1</button>
                             </Link>
                         </div>
                     </div>

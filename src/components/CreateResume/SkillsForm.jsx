@@ -1,9 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import CircleButton from "../UI/CircleButton";
 import ShortInput from "../UI/ShortInput";
+import { SkillAction } from "../../actions";
+import { useDispatch } from "react-redux";
 
 
 export default function SkillsForm(){
+    const dispatch=useDispatch();
     const [skillNameData,setSkillNameData]=useState([{
         skillName:""
     }]);
@@ -21,6 +24,10 @@ export default function SkillsForm(){
         SkillList.splice(index,1);
         setSkillNameData(SkillList);
     }
+
+    useEffect(()=>{
+        dispatch(SkillAction(skillNameData))
+    },[skillNameData,dispatch])
 
     console.log(skillNameData);
 

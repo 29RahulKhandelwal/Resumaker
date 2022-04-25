@@ -1,9 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
+import { EducationAction } from "../../actions";
+import { useDispatch } from "react-redux";
 
 
 export default function EducationForm(){
+    const dispatch=useDispatch();
     const [educationData,setEducationData]=useState([{
         schoolName:"",
         schoolLocation:"",
@@ -36,6 +39,10 @@ export default function EducationForm(){
         data.splice(index,1);
         setEducationData(data);
     }
+
+    useEffect(()=>{
+        dispatch(EducationAction(educationData))
+    },[educationData,dispatch])
 
     // console.log(educationData)
 

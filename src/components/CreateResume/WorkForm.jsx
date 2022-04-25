@@ -1,11 +1,17 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Button from "../UI/Button";
 import CircleButton from "../UI/CircleButton";
 import Input from "../UI/Input";
 import ShortInput from "../UI/ShortInput";
+import { WorkAction } from "../../actions";
+import { useDispatch } from "react-redux";
 
 
 export default function WorkForm(){
+    const dispatch=useDispatch();
+    const [data,setData]=useState({});
+    const [jobResponseData,setJobResponseData]=useState("");
+    const [jobResponse,setJobResponse]=useState([]);
     const [workData,setWorkData]=useState([{
         companyName:"",
         jobTitle:"",
@@ -14,73 +20,58 @@ export default function WorkForm(){
         endDate:"",
         jobResponsibility:""
     }]);
-    function handleChange(event,index){
+    function handleChange(event){
         const {name,value}=event.target;
-        const data=[...workData];
-        data[index][name]=value;
-        setWorkData(data);
+        setWorkData({...workData,[name]:value});
     }
-    function addWorkData(){
-        setWorkData([...workData,{
-            companyName:"",
-            jobTitle:"",
-            jobLocation:"",
-            startDate:"",
-            endDate:"",
-            jobResponsibility:""
-        }])
+    function handleAddInput(){
+        setData(data.length > 0 ? [...data,{...workData,jobResponse:jobResponse}] : [{...workData,jobResponse:jobResponse}])
+        setWorkData({
+        companyName:"",
+        jobTitle:"",
+        jobLocation:"",
+        startDate:"",
+        endDate:"",
+        jobResponsibility:""});
+        setJobResponse([]);
     }
-    function removeWorkData(index){
-        const data=[...workData];
-        data.splice(index,1);
-        setWorkData(data);
-    }
-
-    const [jobResponseData,setjobResponseData]=useState([{jobResponsibility:""}]);
+    // function handleDeleteInput(index){
+    //     const temp=[...data];
+    //     temp.splice(index,1);
+    //     setData(temp);
+    // }
     function handleJobResponseChange(e,index){
-        const {name,value}=e.target;
-        const jobResponseList=[...jobResponseData];
-        jobResponseList[index][name]=value;
-        setjobResponseData(jobResponseList);
+        const {value}=e.target;
+        setJobResponseData(value);
     }
-    function addJobResponse(){
-        setjobResponseData([...jobResponseData,{jobResponsibility:""}])
-    }
-    function deleteJobResponse(index){
-        const jobResponseList=[...jobResponseData];
-        jobResponseList.splice(index,1);
-        setjobResponseData(jobResponseList);
+    function handleJobResponseAdd(){
+        if(jobResponseData){
+            setJobResponse(jobResponse.length > 0 ? [...jobResponse,jobResponseData] : [jobResponseData])
+            setJobResponseData("")
+        } 
     }
 
-    // console.log(workData);
-    console.log(jobResponseData);
+    useEffect(()=>{
+        dispatch(WorkAction(data))
+    },[data,dispatch])
+
+    console.log(data);
 
     return (
         <Fragment>
-            {workData.map((data,index)=>{
-                return (
-                    <div key={index}>
-                        <Input label="CompanyName" id="CompanyName" text="Company Name" type="text" name="companyName" value={data.companyName} onChange={event=>handleChange(event,index)} placeholder="MICROSOFT" />
-                        <Input label="JobTitle" id="JobTitle" text="JobTitle" type="text" name="jobTitle" value={data.jobTitle} onChange={event=>handleChange(event,index)} placeholder="Software Engineer" />
-                        <Input label="JobLocation" id="JobLocation" text="Job Location" type="text" name="jobLocation" value={data.jobLocation} onChange={event=>handleChange(event,index)} placeholder="Stanford, CA" />
-                        <Input label="StartDate" id="StartDate" text="Start Date" type="text" name="startDate" value={data.startDate} onChange={event=>handleChange(event,index)} placeholder="Sep 2018" />
-                        <Input label="EndDate" id="End Date" text="EndDate" type="text" name="endDate" value={data.endDate} onChange={event=>handleChange(event,index)} placeholder="Jun 2022" />
-                        {jobResponseData.map((data,index)=>(
-                            <div key={index}>
-                                <ShortInput label="JobResponsibilty" id="JobResponsibilty" text="Job Responsibilty" type="text" name="jobResponsibility"  placeholder="Did cool stuff at company" value={data.jobResponsibility} onChange={(e)=>handleJobResponseChange(e,index)} />
-                                <div className="circle">
-                                    {jobResponseData.length -1 === index && jobResponseData.length < 5 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+" onClick={addJobResponse}  />}
-                                    {jobResponseData.length > 1 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-" onClick={deleteJobResponse}  />}
-                                </div>
-                            </div>
-                        ))}
-                        <div className="addremove">
-                            {workData.length -1 === index && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Job" onClick={addWorkData} />}
-                            {workData.length !== 1 &&  <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Job" onClick={removeWorkData} />}
-                        </div>
-                    </div>
-                )
-            })}
+            <Input label="CompanyName" id="CompanyName" text="Company Name" type="text" name="companyName" placeholder="MICROSOFT" value={workData.companyName} onChange={event=>handleChange(event)} />
+            <Input label="JobTitle" id="JobTitle" text="JobTitle" type="text" name="jobTitle" placeholder="Software Engineer" value={workData.jobTitle} onChange={event=>handleChange(event)} />
+            <Input label="JobLocation" id="JobLocation" text="Job Location" type="text" name="jobLocation" placeholder="Stanford, CA" value={workData.jobLocation} onChange={event=>handleChange(event)} />
+            <Input label="StartDate" id="StartDate" text="Start Date" type="text" name="startDate" placeholder="Sep 2018" value={workData.startDate} onChange={event=>handleChange(event)} />
+            <Input label="EndDate" id="End Date" text="EndDate" type="text" name="endDate" placeholder="Jun 2022" value={workData.endDate} onChange={event=>handleChange(event)} />
+            <ShortInput label="JobResponsibilty" id="JobResponsibilty" text="Job Responsibilty" type="text" name="jobResponsibility" placeholder="Did cool stuff at company" value={jobResponseData} onChange={event=>handleJobResponseChange(event)} />
+            <div className="circle">
+                <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+" onClick={handleJobResponseAdd} />
+            </div>
+            <div className="addremove">
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Work" onClick={handleAddInput} />
+                <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Work" />
+            </div>
         </Fragment>
     )
 }

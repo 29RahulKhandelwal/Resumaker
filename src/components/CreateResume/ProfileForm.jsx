@@ -1,7 +1,10 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import Input from "../UI/Input";
+import { ProfileAction } from "../../actions";
 
 export default function ProfileForm(){
+    const dispatch=useDispatch();
     const [profileData,setProfileData]=useState({
         fullName:"",
         email:"",
@@ -21,7 +24,10 @@ export default function ProfileForm(){
             }
         })
     }
-    console.log(profileData);
+    useEffect(()=>{
+        dispatch(ProfileAction(profileData))
+    },[profileData,dispatch]);
+
     return (
         <Fragment>
             <Input label="FullName" id="FullName" text="Full Name" type="text" name="fullName" value={profileData.fullName} onChange={handleChange} placeholder="STEPHEN COLBERT" />
