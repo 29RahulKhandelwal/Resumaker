@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Button from "../UI/Button";
-import CircleButton from "../UI/CircleButton";
 import Input from "../UI/Input";
 import ShortInput from "../UI/ShortInput";
 import { ProjectAction } from "../../actions";
@@ -8,61 +7,72 @@ import { useDispatch } from "react-redux";
 
 export default function ProjectForm(){
     const dispatch=useDispatch();
-    const [data,setData]=useState({});
     const [projectData,setProjectData]=useState([{
         projectName:"",
         projectDescription:"",
-        projectLink:""
+        projectLink:"",
+        projectLanguage1:"",
+        projectLanguage2:"",
+        projectLanguage3:"",
+        projectLanguage4:"",
+        projectLanguage5:"",
+        projectLanguage6:"",
+        projectLanguage7:"",
+        projectLanguage8:"",
     }]);
-    const [skillsData,setSkillsData]=useState("");
-    const [skills,setSkills]=useState([]);
-    function handleChange(event){
+    function handleChange(event,index){
         const {name,value}=event.target;
-        setProjectData({...projectData,[name]:value});
+        const projectDataList=[...projectData];
+        projectDataList[index][name]=value;
+        setProjectData(projectDataList)
     }
     function handleAddInput(){
-        setData(data.length > 0 ? [...data,{...projectData,skills:skills}] : [{...projectData,skills:skills}])
-        setProjectData({
-            projectName:"",
-            projectDescription:"",
-            projectLink:""});
-        setSkills([]);
+        setProjectData([...projectData,{projectName:"",
+        projectDescription:"",
+        projectLink:"",
+        projectLanguage1:"",
+        projectLanguage2:"",
+        projectLanguage3:"",
+        projectLanguage4:"",
+        projectLanguage5:"",
+        projectLanguage6:"",
+        projectLanguage7:"",
+        projectLanguage8:""}])
     }
-    // function handleDeleteInput(index){
-    //     const temp=[...data];
-    //     temp.splice(index,1);
-    //     setData(temp);
-    // }
-    function handleSkillChange(e,index){
-        const {value}=e.target;
-        setSkillsData(value);
-    }
-    function handleSkillAdd(){
-        if(skillsData){
-            setSkills(skills.length > 0 ? [...skills,skillsData] : [skillsData])
-            setSkillsData("")
-        } 
+    function handleDeleteInput(index){
+        const projectDataList=[...projectData];
+        projectDataList.splice(index,1);
+        setProjectData(projectDataList)
     }
 
     useEffect(()=>{
-        dispatch(ProjectAction(data))
-    },[data,dispatch])
+        dispatch(ProjectAction(projectData))
+    },[projectData,dispatch])
 
-    console.log(data);
 
     return (
         <Fragment>
-            return (
-                <Input label="ProjectName" id="ProjectName" text="Project Name" type="text" name="projectName" placeholder="Resumaker" value={projectData.projectName} onChange={event=>handleChange(event)} />
-                <Input label="ProjectDescription" id="ProjectDescription" text="Project Description" type="text" name="projectDescription" placeholder="Resumaker is a online application for creating resume just by entering your details." value={projectData.projectDescription} onChange={event=>handleChange(event)} />
-                <Input label="LinkToProject" id="LinkToProject" text="Link To Project" type="url" name="projectLink" placeholder="http://resumaker.com" value={projectData.projectLink} onChange={event=>handleChange(event)} />
-                <ShortInput label="LanguagesUsed" id="LanguagesUsed" text="Languages Used" type="text" name="projectLanguages" placeholder="Javascript" value={skillsData} onChange={event=>handleSkillChange(event)} />
-                <div className="circle">
-                    <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+"  onClick={handleSkillAdd} />
-                </div>
-                <div className="addremove">
-                    <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Skill"  onClick={handleAddInput} />
-                </div>
+            {projectData.map((data,index)=>{
+                return(
+                    <div key={index}>
+                        <Input label="ProjectName" id="ProjectName" text="Project Name" type="text" name="projectName" placeholder="Resumaker" value={data.projectName} onChange={event=>handleChange(event,index)} />
+                        <Input label="ProjectDescription" id="ProjectDescription" text="Project Description" type="text" name="projectDescription" placeholder="Resumaker is a online application for creating resume just by entering your details." value={data.projectDescription} onChange={event=>handleChange(event,index)} />
+                        <Input label="LinkToProject" id="LinkToProject" text="Link To Project" type="url" name="projectLink" placeholder="http://resumaker.com" value={data.projectLink} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage1" id="projectLanguage1" text="Languages Used" type="text" name="projectLanguage1" placeholder="Javascript" value={data.projectLanguage1} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage2" id="projectLanguage2" text="Languages Used" type="text" name="projectLanguage2" placeholder="Javascript" value={data.projectLanguage2} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage3" id="projectLanguage3" text="Languages Used" type="text" name="projectLanguage3" placeholder="Javascript" value={data.projectLanguage3} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage4" id="projectLanguage4" text="Languages Used" type="text" name="projectLanguage4" placeholder="Javascript" value={data.projectLanguage4} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage5" id="projectLanguage5" text="Languages Used" type="text" name="projectLanguage5" placeholder="Javascript" value={data.projectLanguage5} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage6" id="projectLanguage6" text="Languages Used" type="text" name="projectLanguage6" placeholder="Javascript" value={data.projectLanguage6} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage7" id="projectLanguage7" text="Languages Used" type="text" name="projectLanguage7" placeholder="Javascript" value={data.projectLanguage7} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage8" id="projectLanguage8" text="Languages Used" type="text" name="projectLanguage8" placeholder="Javascript" value={data.projectLanguage8} onChange={event=>handleChange(event,index)} />
+                        <div className="addremove">
+                            {projectData.length -1 === index && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Project"  onClick={handleAddInput} />}
+                            {projectData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Project"  onClick={()=>handleDeleteInput(index)} />}
+                        </div>
+                    </div>
+                )
+            })}
         </Fragment>
     )
 }
