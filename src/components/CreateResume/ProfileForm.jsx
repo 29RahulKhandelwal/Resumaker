@@ -3,18 +3,27 @@ import { useDispatch } from "react-redux";
 import Input from "../UI/Input";
 import { ProfileAction } from "../../actions";
 
+const getProfileDataFromLocalStorage=()=>{
+    let data=localStorage.getItem("profile_data");
+    if(data){
+        return JSON.parse(data)
+    }else{
+        return{
+            fullName:"",
+            email:"",
+            phn:"",
+            location:"",
+            link:"",
+            jobRole:"",
+            imageUrl:"",
+            about:""
+        }
+    }
+}
+
 export default function ProfileForm(){
     const dispatch=useDispatch();
-    const [profileData,setProfileData]=useState({
-        fullName:"",
-        email:"",
-        phn:"",
-        location:"",
-        link:"",
-        jobRole:"",
-        imageUrl:"",
-        about:""
-    });
+    const [profileData,setProfileData]=useState(getProfileDataFromLocalStorage);
     function handleChange(event){
         const {name,value}=event.target;
         setProfileData(prevData=>{
@@ -26,6 +35,7 @@ export default function ProfileForm(){
     }
     useEffect(()=>{
         dispatch(ProfileAction(profileData))
+        localStorage.setItem("profile_data",JSON.stringify(profileData))
     },[profileData,dispatch]);
 
     return (

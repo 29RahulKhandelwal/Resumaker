@@ -4,12 +4,20 @@ import ShortInput from "../UI/ShortInput";
 import { SkillAction } from "../../actions";
 import { useDispatch } from "react-redux";
 
+const getSkillsDataFromLocalStorage=()=>{
+    let data=localStorage.getItem("skills_data");
+    if(data){
+        return JSON.parse(data)
+    }else{
+        return[{
+            skillName:""
+        }]
+    }
+}
 
 export default function SkillsForm(){
     const dispatch=useDispatch();
-    const [skillNameData,setSkillNameData]=useState([{
-        skillName:""
-    }]);
+    const [skillNameData,setSkillNameData]=useState(getSkillsDataFromLocalStorage);
     function handleChange(event,index){
         const {name,value}=event.target;
         const SkillList=[...skillNameData];
@@ -27,9 +35,9 @@ export default function SkillsForm(){
 
     useEffect(()=>{
         dispatch(SkillAction(skillNameData))
+        localStorage.setItem("skills_data",JSON.stringify(skillNameData))
     },[skillNameData,dispatch])
 
-    console.log(skillNameData);
 
     return (
         <Fragment>

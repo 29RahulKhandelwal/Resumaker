@@ -4,18 +4,26 @@ import Input from "../UI/Input";
 import { EducationAction } from "../../actions";
 import { useDispatch } from "react-redux";
 
+const getEducationDataFromLocalStorage=()=>{
+    let data=localStorage.getItem("education_data");
+    if(data){
+        return JSON.parse(data)
+    }else{
+        return[{
+            schoolName:"",
+            schoolLocation:"",
+            percentage:"",
+            major:"",
+            cgpa:"",
+            educationStartDate:"",
+            educationEndDate:""
+        }]
+    }
+}
 
 export default function EducationForm(){
     const dispatch=useDispatch();
-    const [educationData,setEducationData]=useState([{
-        schoolName:"",
-        schoolLocation:"",
-        percentage:"",
-        major:"",
-        cgpa:"",
-        educationStartDate:"",
-        educationEndDate:""
-    }]);
+    const [educationData,setEducationData]=useState(getEducationDataFromLocalStorage);
     function handleChange(event,index){
         const {name,value}=event.target;
         const data=[...educationData];
@@ -42,13 +50,13 @@ export default function EducationForm(){
 
     useEffect(()=>{
         dispatch(EducationAction(educationData))
+        localStorage.setItem("education_data",JSON.stringify(educationData))
     },[educationData,dispatch])
 
-    // console.log(educationData)
 
     return (
         <Fragment>
-            {educationData.map((data,index)=>{
+            {educationData.map((educationData,index)=>{
                 return (
                     <div key={index}>
                         <Input label="SchoolName" id="SchoolName" text="School Name" type="text" name="schoolName" value={educationData.schoolName} onChange={event=>handleChange(event,index)} placeholder="Stanford University" />

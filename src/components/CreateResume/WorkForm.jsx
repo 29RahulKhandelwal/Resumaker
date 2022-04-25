@@ -5,21 +5,29 @@ import ShortInput from "../UI/ShortInput";
 import { WorkAction } from "../../actions";
 import { useDispatch } from "react-redux";
 
+const getWorkDataFromLocalStorage=()=>{
+    let data=localStorage.getItem("work_data");
+    if(data){
+        return JSON.parse(data)
+    }else{
+        return[{
+            companyName:"",
+            jobTitle:"",
+            jobLocation:"",
+            startDate:"",
+            endDate:"",
+            jobResponsibility1:"",
+            jobResponsibility2:"",
+            jobResponsibility3:"",
+            jobResponsibility4:"",
+            jobResponsibility5:"",
+        }]
+    }
+}
 
 export default function WorkForm(){
     const dispatch=useDispatch();
-    const [workData,setWorkData]=useState([{
-        companyName:"",
-        jobTitle:"",
-        jobLocation:"",
-        startDate:"",
-        endDate:"",
-        jobResponsibility1:"",
-        jobResponsibility2:"",
-        jobResponsibility3:"",
-        jobResponsibility4:"",
-        jobResponsibility5:"",
-    }]);
+    const [workData,setWorkData]=useState(getWorkDataFromLocalStorage);
     function handleChange(event,index){
         const {name,value}=event.target;
         const workDataList=[...workData];
@@ -46,6 +54,7 @@ export default function WorkForm(){
     
     useEffect(()=>{
         dispatch(WorkAction(workData))
+        localStorage.setItem("work_data",JSON.stringify(workData))
     },[workData,dispatch])
 
     

@@ -5,21 +5,30 @@ import ShortInput from "../UI/ShortInput";
 import { ProjectAction } from "../../actions";
 import { useDispatch } from "react-redux";
 
+const getProjectDataFromLocalStorage=()=>{
+    let data=localStorage.getItem("project_data");
+    if(data){
+        return JSON.parse(data)
+    }else{
+        return[{
+            projectName:"",
+            projectDescription:"",
+            projectLink:"",
+            projectLanguage1:"",
+            projectLanguage2:"",
+            projectLanguage3:"",
+            projectLanguage4:"",
+            projectLanguage5:"",
+            projectLanguage6:"",
+            projectLanguage7:"",
+            projectLanguage8:"",
+        }]
+    }
+}
+
 export default function ProjectForm(){
     const dispatch=useDispatch();
-    const [projectData,setProjectData]=useState([{
-        projectName:"",
-        projectDescription:"",
-        projectLink:"",
-        projectLanguage1:"",
-        projectLanguage2:"",
-        projectLanguage3:"",
-        projectLanguage4:"",
-        projectLanguage5:"",
-        projectLanguage6:"",
-        projectLanguage7:"",
-        projectLanguage8:"",
-    }]);
+    const [projectData,setProjectData]=useState(getProjectDataFromLocalStorage);
     function handleChange(event,index){
         const {name,value}=event.target;
         const projectDataList=[...projectData];
@@ -47,6 +56,7 @@ export default function ProjectForm(){
 
     useEffect(()=>{
         dispatch(ProjectAction(projectData))
+        localStorage.setItem("project_data",JSON.stringify(projectData))
     },[projectData,dispatch])
 
 

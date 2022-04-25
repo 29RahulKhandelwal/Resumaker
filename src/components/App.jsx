@@ -11,7 +11,6 @@ import ResumeFooter from "./HeaderFooter/ResumeFooter";
 import Work from "./CreateResume/Work";
 import Skills from "./CreateResume/Skills";
 import Project from "./CreateResume/Project";
-// import HonorAwards from "./CreateResume/HonorAwards";
 
 export default function App() {
     return (
@@ -35,6 +34,7 @@ export default function App() {
                     </Routes>
                     </div>
                     <div className="col col-lg-6 col-border col-display">
+                        
                     </div>
                     <ResumeFooter />
                 </div>
