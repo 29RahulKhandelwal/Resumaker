@@ -11,6 +11,13 @@
 .about{
   color: #fff;
 }
+.project-anchor{
+	text-decoration: none;
+	color: black;
+}
+.project-anchor:hover{
+	text-decoration: underline;
+}
 .resume_about{
   margin: 20px 0px;
   margin-top: -20px;

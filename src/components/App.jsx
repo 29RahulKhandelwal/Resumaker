@@ -11,6 +11,7 @@ import ResumeFooter from "./HeaderFooter/ResumeFooter";
 import Work from "./CreateResume/Work";
 import Skills from "./CreateResume/Skills";
 import Project from "./CreateResume/Project";
+import Preview from "./CreateResume/Preview";
 
 export default function App() {
     return (
@@ -19,7 +20,7 @@ export default function App() {
             {window.location.pathname === "/" ? <HomePage /> : (
             <div className="main">
                 <div className="row">
-                    <div className="col col-lg-1 col-border col-display">
+                    <div className="col col-lg-1 col-border col-display side-nav">
                         <SideLinks />
                     </div>
                     <div className="col col-lg-5 col-md-12 col-border scroll-bar">
@@ -33,8 +34,8 @@ export default function App() {
                         {/* <Route exact path="/resume-generator/awards" element={<HonorAwards/>} /> */}
                     </Routes>
                     </div>
-                    <div className="col col-lg-6 col-border col-display">
-                        
+                    <div className="col col-lg-6 col-border col-display scroll-bar">
+                        <Preview />
                     </div>
                     <ResumeFooter />
                 </div>

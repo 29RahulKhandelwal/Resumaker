@@ -9,17 +9,28 @@
 }
 
 body{
-	background: #c4c4c4;
 	font-size: 14px;
 	line-height: 20px;
 }
-
 .resume_wrapper{
 	display: flex;
-	width: 800px;
+	width: 730px;
 	margin: 50px auto;
 	background: #fff;
 	padding: 10px;
+}
+
+
+.circle-style{
+	font-size: x-small;
+}
+
+.project-anchor{
+	text-decoration: none;
+	color: black;
+}
+.project-anchor:hover{
+	text-decoration: underline;
 }
 
 .resume_wrapper .resume_left{
@@ -61,6 +72,7 @@ body{
 .resume_wrapper  .resume_item:last-child{
 	border-bottom: 0;
 }
+
 
 .resume_wrapper .resume_left .resume_namerole{
 	display: none;

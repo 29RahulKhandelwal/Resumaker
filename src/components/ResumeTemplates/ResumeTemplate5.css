@@ -37,6 +37,13 @@ body{
 	display: flex;
 	box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
+.project-anchor{
+	text-decoration: none;
+	color: black;
+}
+.project-anchor:hover{
+	text-decoration: underline;
+}
 .skills{
 	text-align: center;
     margin-left: 72px;

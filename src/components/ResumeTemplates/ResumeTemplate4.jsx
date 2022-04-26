@@ -8,7 +8,7 @@ export default function ResumeTemplate4(props) {
                 <div class="left-content">
                     <div class="profile">
                         <div class="image">
-                            <img src="./avatar.jpg" alt="pic" />
+                            <img src="./avatar.jpg" alt="img" />
                         </div>
                         <h2 class="name">Lorem Dola Ipsum</h2>
                         <p class="career">Software Engineer</p>
@@ -118,17 +118,12 @@ export default function ResumeTemplate4(props) {
                         <h2 class="right-title">education</h2>
                         <div class="timeline">
                             <div class="left-tl-content">
-                                <h5 class="tl-title">Cheney School</h5>
+                                <h5 class="tl-title">Cheney School, India</h5>
                                 <p class="para">2016 - 2018</p>
                             </div>
                             <div class="right-tl-content">
                                 <div class="tl-content">
-                                    <h5 class="tl-title-2">A - Levels</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
+                                    <h5 class="tl-title-2">CGPA: 8.6 Percentage: 90</h5>
                                 </div>
                             </div>
                         </div>
@@ -154,6 +149,7 @@ export default function ResumeTemplate4(props) {
                         <div class="timeline">
                             <div class="left-tl-content">
                                 <h5 class="tl-title">FunGame</h5>
+                                <p class="para"><a href="" class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a></p>
                                 <p class="para">Dec 2020 - Jan 2018</p>
                             </div>
                             <div class="right-tl-content">

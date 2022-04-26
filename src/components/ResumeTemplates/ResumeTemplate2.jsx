@@ -103,8 +103,9 @@ export default function ResumeTemplate2(props) {
                         <li>
                             <div class="date">2013 - 2015</div>
                             <div class="info">
-                                <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                                <p class="semi-bold">Microsoft, India</p>
+                                <p class="semi-bold">Software Engineer</p>
+                                <p>Job Responsibility</p>
                             </div>
                         </li>
                         <li>
@@ -131,8 +132,8 @@ export default function ResumeTemplate2(props) {
                         <li>
                             <div class="date">2010 - 2013</div>
                             <div class="info">
-                                <p class="semi-bold">Web Designing (Texas University)</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                                <p class="semi-bold">B.Tech in CSE (HMRITM, India)</p>
+                                <p>CGPA: 8.6 Percentage: 90</p>
                             </div>
                         </li>
                         <li>
@@ -153,6 +154,7 @@ export default function ResumeTemplate2(props) {
                             <div class="date">Sep 2018 - Dec 2018</div>
                             <div class="info">
                                 <p class="semi-bold">Chat Application</p>
+                                <a href="" class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>
                                 <p class="semi-bold">Technology: Python Django</p>
                                 <p>Real Time chat application build using node.js and socket.io</p>
                             </div>
@@ -166,6 +168,7 @@ export default function ResumeTemplate2(props) {
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
     )

@@ -22,11 +22,11 @@ export default function ResumeTemplate5(props) {
                             <li>
                                 <div class="item">
                                     <div class="item_grp">
-                                        <p class="title">Experience_1</p>
-                                        <p class="sub_title">Sub_Experience_1</p>
+                                        <p class="title">Microsoft, India</p>
+                                        <p class="sub_title">Software Engineer</p>
                                         <span class="timeline">2020 - Present</span>
                                     </div>
-                                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p class="content">Job Responsibility.</p>
                                 </div>
                             </li>
                         </ul>
@@ -37,11 +37,10 @@ export default function ResumeTemplate5(props) {
                             <li>
                                 <div class="item">
                                     <div class="item_grp">
-                                        <p class="title">Education_1</p>
-                                        <p class="sub_title">Sub_Education_1</p>
+                                        <p class="title">B.Tech in CSE (HMRITM, India)</p>
+                                        <p class="sub_title">CGPA: 8.6 Percentage: 90</p>
                                         <span class="timeline">2011-2015</span>
                                     </div>
-                                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 </div>
                             </li>
                         </ul>
@@ -53,6 +52,7 @@ export default function ResumeTemplate5(props) {
                                 <div class="item">
                                     <div class="item_grp">
                                         <p class="title">Chat Application</p>
+                                        <a href="" class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>
                                         <span class="timeline">Jun 2019- July 2019</span>
                                         <p class="technology">Technology: Javascript React</p>
                                     </div>

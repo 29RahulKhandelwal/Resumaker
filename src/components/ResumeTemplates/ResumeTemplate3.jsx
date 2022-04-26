@@ -7,7 +7,7 @@ export default function ResumeTemplate3(props) {
             <div class="resume">
                 <div class="left">
                     <div class="img_holder">
-                        <img src="pic.png" alt="pic" />
+                        <img src="pic.png" alt="img" />
                     </div>
                     <div class="contact_wrap pb">
                         <div class="title">
@@ -50,25 +50,21 @@ export default function ResumeTemplate3(props) {
                             <ul>
                                 <li>
                                     <div class="li_wrap">
-                                        <div class="icon"><i class="fab fa-html5"></i></div>
                                         <div class="text">HTML</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="li_wrap">
-                                        <div class="icon"><i class="fab fa-css3-alt"></i></div>
                                         <div class="text">CSS</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="li_wrap">
-                                        <div class="icon"><i class="fab fa-js"></i></div>
                                         <div class="text">Javascript</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="li_wrap">
-                                        <div class="icon"><i class="fab fa-react"></i></div>
                                         <div class="text">React.JS</div>
                                     </div>
                                 </li>
@@ -137,7 +133,7 @@ export default function ResumeTemplate3(props) {
                                                     Israel University
                                                 </p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptatibus consequatur rem nostrum omnis! Architecto.
+                                                    CGPA: 8.6 Percentage: 90
                                                 </p>
                                             </div>
                                         </div>
@@ -177,6 +173,9 @@ export default function ResumeTemplate3(props) {
                                             <div class="info">
                                                 <p class="info_title">
                                                     MultiScreener
+                                                </p>
+                                                <p class="info_com">
+                                                    <a href="" class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>
                                                 </p>
                                                 <p class="info_com">
                                                     Technology: MERN

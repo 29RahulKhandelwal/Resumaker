@@ -12,8 +12,8 @@ body{
 
 .main-content{
     min-height: 100vh;
-    width: 80%;
-    margin: 2rem auto;
+    width: 100%;
+    margin: 2rem 20%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
@@ -32,11 +32,17 @@ body{
     padding-top: 20px;
 }
 .right-section{
-    grid-column: span 2;
+    grid-column: span 3;
     background-color: #f7f7f7;
     height: 100%;
 }
-
+.project-anchor{
+	text-decoration: none;
+	color: black;
+}
+.project-anchor:hover{
+	text-decoration: underline;
+}
 
 .left-content{
     padding: 2rem 3rem;
