@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./ResumeTemplate1.css";
 
-export default function ResumeTemplate1(props) {
+function ResumeTemplate1(props,ref) {
     var profileData=props.profileData;
     var educationData=props.educationData;
     var workData=props.workData;
@@ -12,7 +12,7 @@ export default function ResumeTemplate1(props) {
             {
                 profileData.map((profileElem, profileIndex) => {
                     return (
-                        <div class="resume_wrapper" key={profileIndex}>
+                        <div class="resume_wrapper" key={profileIndex} ref={ref}>
                             <div class="resume_left">
                                 {profileElem?.data?.imageUrl && <div class="resume_image">
                                     <img src={profileElem.data.imageUrl} alt="Resume_image" />
@@ -221,6 +221,42 @@ export default function ResumeTemplate1(props) {
                                                         <p>{projectElem.data[0].projectDescription}</p>
                                                     </div>
                                                 </div>}
+                                                {projectElem?.data[1] && <div class="resume_data">
+                                                    <div class="year">{projectElem.data[1].startDate} - {projectElem.data[1].endDate}</div>
+                                                    <div class="content">
+                                                        <p>{projectElem.data[1].projectName}</p>
+                                                        {projectElem.data[1].projectLink && <a href={projectElem.data[1].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}
+                                                        {projectElem.data[1].projectLanguage1 && <p>Technology: {projectElem.data[1].projectLanguage1} {projectElem.data[1].projectLanguage2} {projectElem.data[1].projectLanguage3} {projectElem.data[1].projectLanguage4} {projectElem.data[1].projectLanguage5} {projectElem.data[1].projectLanguage6} {projectElem.data[1].projectLanguage7} {projectElem.data[1].projectLanguage8}</p>}
+                                                        <p>{projectElem.data[1].projectDescription}</p>
+                                                    </div>
+                                                </div>}
+                                                {projectElem?.data[2] && <div class="resume_data">
+                                                    <div class="year">{projectElem.data[2].startDate} - {projectElem.data[2].endDate}</div>
+                                                    <div class="content">
+                                                        <p>{projectElem.data[2].projectName}</p>
+                                                        {projectElem.data[2].projectLink && <a href={projectElem.data[2].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}
+                                                        {projectElem.data[2].projectLanguage1 && <p>Technology: {projectElem.data[2].projectLanguage1} {projectElem.data[2].projectLanguage2} {projectElem.data[2].projectLanguage3} {projectElem.data[2].projectLanguage4} {projectElem.data[2].projectLanguage5} {projectElem.data[2].projectLanguage6} {projectElem.data[2].projectLanguage7} {projectElem.data[2].projectLanguage8}</p>}
+                                                        <p>{projectElem.data[2].projectDescription}</p>
+                                                    </div>
+                                                </div>}
+                                                {projectElem?.data[3] && <div class="resume_data">
+                                                    <div class="year">{projectElem.data[3].startDate} - {projectElem.data[3].endDate}</div>
+                                                    <div class="content">
+                                                        <p>{projectElem.data[3].projectName}</p>
+                                                        {projectElem.data[3].projectLink && <a href={projectElem.data[3].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}
+                                                        {projectElem.data[3].projectLanguage1 && <p>Technology: {projectElem.data[3].projectLanguage1} {projectElem.data[3].projectLanguage2} {projectElem.data[3].projectLanguage3} {projectElem.data[3].projectLanguage4} {projectElem.data[3].projectLanguage5} {projectElem.data[3].projectLanguage6} {projectElem.data[3].projectLanguage7} {projectElem.data[3].projectLanguage8}</p>}
+                                                        <p>{projectElem.data[3].projectDescription}</p>
+                                                    </div>
+                                                </div>}
+                                                {projectElem?.data[4] && <div class="resume_data">
+                                                    <div class="year">{projectElem.data[4].startDate} - {projectElem.data[4].endDate}</div>
+                                                    <div class="content">
+                                                        <p>{projectElem.data[4].projectName}</p>
+                                                        {projectElem.data[4].projectLink && <a href={projectElem.data[4].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}
+                                                        {projectElem.data[4].projectLanguage1 && <p>Technology: {projectElem.data[4].projectLanguage1} {projectElem.data[4].projectLanguage2} {projectElem.data[4].projectLanguage3} {projectElem.data[4].projectLanguage4} {projectElem.data[4].projectLanguage5} {projectElem.data[4].projectLanguage6} {projectElem.data[4].projectLanguage7} {projectElem.data[4].projectLanguage8}</p>}
+                                                        <p>{projectElem.data[4].projectDescription}</p>
+                                                    </div>
+                                                </div>}
 
                                             </div>
                                         </div>
@@ -234,3 +270,5 @@ export default function ResumeTemplate1(props) {
         </>
     )
 }
+
+export default forwardRef(ResumeTemplate1);

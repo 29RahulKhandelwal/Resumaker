@@ -83,7 +83,7 @@ export default function ProjectForm(){
                         <ShortInput label="projectLanguage7" id="projectLanguage7" text="Technology Used" type="text" name="projectLanguage7" placeholder="Javascript" value={data.projectLanguage7} onChange={event=>handleChange(event,index)} />
                         <ShortInput label="projectLanguage8" id="projectLanguage8" text="Technology Used" type="text" name="projectLanguage8" placeholder="Javascript" value={data.projectLanguage8} onChange={event=>handleChange(event,index)} />
                         <div className="addremove">
-                            {projectData.length -1 === index && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Project"  onClick={handleAddInput} />}
+                            {projectData.length -1 === index && projectData.length < 5 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Project"  onClick={handleAddInput} />}
                             {projectData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Project"  onClick={()=>handleDeleteInput(index)} />}
                         </div>
                     </div>

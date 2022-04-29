@@ -74,7 +74,7 @@ export default function WorkForm(){
                         <ShortInput label="JobResponsibilty4" id="JobResponsibilty4" text="Job Responsibilty" type="text" name="jobResponsibility4" placeholder="Did cool stuff at company" value={data.jobResponsibility4} onChange={event=>handleChange(event,index)} />
                         <ShortInput label="JobResponsibilty5" id="JobResponsibilty5" text="Job Responsibilty" type="text" name="jobResponsibility5" placeholder="Did cool stuff at company" value={data.jobResponsibility5} onChange={event=>handleChange(event,index)} />
                         <div className="addremove">
-                            {workData.length -1 === index &&  <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Work" onClick={handleAddInput} />}
+                            {workData.length -1 === index && workData.length < 5 &&  <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Work" onClick={handleAddInput} />}
                             {workData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Work"  onClick={()=>handleRemoveInput(index)} />}
                         </div>
                     </div>

@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
-*{
+/* *{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	box-sizing: border-box;
 	font-family: 'Ubuntu', sans-serif;
-}
+} */
 
 /* body{
 	background: linear-gradient(to right, #3525af, #9153c9);
 } */
 
-.resume{
-	width: 800px;
+.resume_template3{
+	width: 719px;
 	background: #fff;
-	margin: 25px auto;
+	margin: 10px auto;
 	display: flex;
 }
 
@@ -44,7 +44,7 @@
 	margin-top: 25px;
 }
 
-.title{
+.resume_template3_title{
 	font-size: 24px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -56,7 +56,7 @@
 	margin-bottom: 15px;
 }
 
-.title:before{
+.resume_template3_title:before{
 	content: "";
 	position: absolute;
 	top: 35px;
@@ -115,6 +115,9 @@
 .project-anchor:hover{
 	text-decoration: underline;
 }
+.resume_template3_ul{
+	padding-left: 0;
+}
 .skills .li_wrap,
 .hobbies .li_wrap{
 	width: 100px;
@@ -124,6 +127,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	justify-content: center;
 }
 
@@ -158,7 +162,7 @@
 	background: #292b2f;
 	padding: 15px 30px;
 	color: #fff;
-	height: 240px;
+	height: 306px;
 }
 
 .header .name{

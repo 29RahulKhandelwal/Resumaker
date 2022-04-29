@@ -67,7 +67,7 @@ export default function EducationForm(){
                         <Input label="educationStartDate" id="educationStartDate" text="Start Date" type="text" name="educationStartDate" value={data.educationStartDate} onChange={event=>handleChange(event,index)} placeholder="Sep 2018" />
                         <Input label="educationEndDate" id="educationEndDate" text="EndDate" type="text" name="educationEndDate" value={data.educationEndDate} onChange={event=>handleChange(event,index)} placeholder="Jun 2022" />
                         <div className="addremove">
-                            {educationData.length -1 === index && educationData.length < 10 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add School" onClick={handleAddMoreEducation} />}
+                            {educationData.length -1 === index && educationData.length < 5 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add School" onClick={handleAddMoreEducation} />}
                             {educationData.length !== 1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove School" onClick={()=>handleDeleteMoreEducation(index)} />}
                         </div>
                     </div>
