@@ -5,7 +5,7 @@ import ResumeTemplate1 from '../ResumeTemplates/ResumeTemplate1';
 import ResumeTemplate2 from '../ResumeTemplates/ResumeTemplate2';
 import ResumeTemplate3 from '../ResumeTemplates/ResumeTemplate3';
 import ResumeTemplate4 from '../ResumeTemplates/ResumeTemplate4';
-// import ResumeTemplate5 from '../ResumeTemplates/ResumeTemplate5';
+import ResumeTemplate5 from '../ResumeTemplates/ResumeTemplate5';
 
 const Preview = () => {
     var clicked=localStorage.getItem("Template");
@@ -27,7 +27,7 @@ const Preview = () => {
             {clicked === "Template2" && <ResumeTemplate2 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef} />}
             {clicked === "Template3" && <ResumeTemplate3 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef}  />}
             {clicked === "Template4" && <ResumeTemplate4 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef} />}
-            {/* {clicked === "Template5" && <ResumeTemplate5 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} />} */}
+            {clicked === "Template5" && <ResumeTemplate5 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef} />}
         </>
     )
 }
