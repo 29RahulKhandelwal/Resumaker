@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,12 +8,12 @@
 
 body{
     background-color: #94D9EA;
-}
+} */
 
 .main-content{
     min-height: 100vh;
     width: 100%;
-    margin: 2rem 20%;
+    margin: 10px auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
@@ -32,7 +32,7 @@ body{
     padding-top: 20px;
 }
 .right-section{
-    grid-column: span 3;
+    grid-column: span 6;
     background-color: #f7f7f7;
     height: 100%;
 }
@@ -44,9 +44,9 @@ body{
 	text-decoration: underline;
 }
 
-.left-content{
+/* .left-content{
     padding: 2rem 3rem;
-}
+} */
 .profile{
     width: 100%;
     border-bottom: 1px solid #002333;
@@ -114,7 +114,7 @@ body{
     padding: .4rem 0;
 }
 
-.progress-bar{
+/* .progress-bar{
     width: 100%;
     height: .4rem;
     background-color: #2f81ed5b;
@@ -145,7 +145,7 @@ body{
 }
 .w-progress{
     width: 78%;
-}
+} */
 
 
 .skill-title{
@@ -196,12 +196,13 @@ body{
 .right-title::after{
     content: "";
     position: absolute;
-    width: 60%;
-    height: .2rem;
+    width: 50%;
+    height: 0.2rem;
     background-color: #ccc;
     border-radius: 12px;
     right: 0;
     top: 50%;
+    left: 50%;
     transform: translateY(-50%);
 }
 

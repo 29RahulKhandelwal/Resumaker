@@ -155,7 +155,7 @@ function ResumeTemplate1(props,ref) {
                                                     </div>
                                                 </div>}
                                                 {workElem?.data[1] && <div class="resume_data">
-                                                    <div class="year">{workElem.data[0].startDate} - {workElem.data[1].endDate}</div>
+                                                    <div class="year">{workElem.data[1].startDate} - {workElem.data[1].endDate}</div>
                                                     <div class="content">
                                                         <p>{workElem.data[1].companyName}, {workElem.data[1].jobLocation}</p>
                                                         <p>{workElem.data[1].jobTitle}</p>
@@ -167,7 +167,7 @@ function ResumeTemplate1(props,ref) {
                                                     </div>
                                                 </div>}
                                                 {workElem?.data[2] && <div class="resume_data">
-                                                    <div class="year">{workElem.data[0].startDate} - {workElem.data[2].endDate}</div>
+                                                    <div class="year">{workElem.data[2].startDate} - {workElem.data[2].endDate}</div>
                                                     <div class="content">
                                                         <p>{workElem.data[2].companyName}, {workElem.data[0].jobLocation}</p>
                                                         <p>{workElem.data[2].jobTitle}</p>
@@ -179,7 +179,7 @@ function ResumeTemplate1(props,ref) {
                                                     </div>
                                                 </div>}
                                                 {workElem?.data[3] && <div class="resume_data">
-                                                    <div class="year">{workElem.data[0].startDate} - {workElem.data[3].endDate}</div>
+                                                    <div class="year">{workElem.data[3].startDate} - {workElem.data[3].endDate}</div>
                                                     <div class="content">
                                                         <p>{workElem.data[3].companyName}, {workElem.data[0].jobLocation}</p>
                                                         <p>{workElem.data[3].jobTitle}</p>
@@ -191,7 +191,7 @@ function ResumeTemplate1(props,ref) {
                                                     </div>
                                                 </div>}
                                                 {workElem?.data[4] && <div class="resume_data">
-                                                    <div class="year">{workElem.data[0].startDate} - {workElem.data[4].endDate}</div>
+                                                    <div class="year">{workElem.data[4].startDate} - {workElem.data[4].endDate}</div>
                                                     <div class="content">
                                                         <p>{workElem.data[4].companyName}, {workElem.data[0].jobLocation}</p>
                                                         <p>{workElem.data[4].jobTitle}</p>
