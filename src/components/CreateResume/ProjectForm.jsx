@@ -14,6 +14,8 @@ const getProjectDataFromLocalStorage=()=>{
             projectName:"",
             projectDescription:"",
             projectLink:"",
+            startDate:"",
+            endDate:"",
             projectLanguage1:"",
             projectLanguage2:"",
             projectLanguage3:"",
@@ -39,6 +41,8 @@ export default function ProjectForm(){
         setProjectData([...projectData,{projectName:"",
         projectDescription:"",
         projectLink:"",
+        startDate:"",
+        endDate:"",
         projectLanguage1:"",
         projectLanguage2:"",
         projectLanguage3:"",
@@ -68,14 +72,16 @@ export default function ProjectForm(){
                         <Input label="ProjectName" id="ProjectName" text="Project Name" type="text" name="projectName" placeholder="Resumaker" value={data.projectName} onChange={event=>handleChange(event,index)} />
                         <Input label="ProjectDescription" id="ProjectDescription" text="Project Description" type="text" name="projectDescription" placeholder="Resumaker is a online application for creating resume just by entering your details." value={data.projectDescription} onChange={event=>handleChange(event,index)} />
                         <Input label="LinkToProject" id="LinkToProject" text="Link To Project" type="url" name="projectLink" placeholder="http://resumaker.com" value={data.projectLink} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage1" id="projectLanguage1" text="Languages Used" type="text" name="projectLanguage1" placeholder="Javascript" value={data.projectLanguage1} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage2" id="projectLanguage2" text="Languages Used" type="text" name="projectLanguage2" placeholder="Javascript" value={data.projectLanguage2} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage3" id="projectLanguage3" text="Languages Used" type="text" name="projectLanguage3" placeholder="Javascript" value={data.projectLanguage3} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage4" id="projectLanguage4" text="Languages Used" type="text" name="projectLanguage4" placeholder="Javascript" value={data.projectLanguage4} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage5" id="projectLanguage5" text="Languages Used" type="text" name="projectLanguage5" placeholder="Javascript" value={data.projectLanguage5} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage6" id="projectLanguage6" text="Languages Used" type="text" name="projectLanguage6" placeholder="Javascript" value={data.projectLanguage6} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage7" id="projectLanguage7" text="Languages Used" type="text" name="projectLanguage7" placeholder="Javascript" value={data.projectLanguage7} onChange={event=>handleChange(event,index)} />
-                        <ShortInput label="projectLanguage8" id="projectLanguage8" text="Languages Used" type="text" name="projectLanguage8" placeholder="Javascript" value={data.projectLanguage8} onChange={event=>handleChange(event,index)} />
+                        <Input label="StartDate" id="StartDate" text="Start Date" type="text" name="startDate" placeholder="Sep 2018" value={data.startDate} onChange={event=>handleChange(event,index)} />
+                        <Input label="EndDate" id="End Date" text="EndDate" type="text" name="endDate" placeholder="Jun 2022" value={data.endDate} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage1" id="projectLanguage1" text="Technology Used" type="text" name="projectLanguage1" placeholder="Javascript" value={data.projectLanguage1} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage2" id="projectLanguage2" text="Technology Used" type="text" name="projectLanguage2" placeholder="Javascript" value={data.projectLanguage2} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage3" id="projectLanguage3" text="Technology Used" type="text" name="projectLanguage3" placeholder="Javascript" value={data.projectLanguage3} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage4" id="projectLanguage4" text="Technology Used" type="text" name="projectLanguage4" placeholder="Javascript" value={data.projectLanguage4} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage5" id="projectLanguage5" text="Technology Used" type="text" name="projectLanguage5" placeholder="Javascript" value={data.projectLanguage5} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage6" id="projectLanguage6" text="Technology Used" type="text" name="projectLanguage6" placeholder="Javascript" value={data.projectLanguage6} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage7" id="projectLanguage7" text="Technology Used" type="text" name="projectLanguage7" placeholder="Javascript" value={data.projectLanguage7} onChange={event=>handleChange(event,index)} />
+                        <ShortInput label="projectLanguage8" id="projectLanguage8" text="Technology Used" type="text" name="projectLanguage8" placeholder="Javascript" value={data.projectLanguage8} onChange={event=>handleChange(event,index)} />
                         <div className="addremove">
                             {projectData.length -1 === index && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Project"  onClick={handleAddInput} />}
                             {projectData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Project"  onClick={()=>handleDeleteInput(index)} />}

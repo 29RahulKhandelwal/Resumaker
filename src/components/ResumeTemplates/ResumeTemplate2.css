@@ -24,10 +24,13 @@
 }
 
 body {
-  background: #585c68;
-  font-size: 14px;
-  line-height: 22px;
   color: #555555;
+}
+
+.download-btn{
+	margin: 0px 170px;
+    text-align: center;
+    height: 35px;
 }
 
 .bold {
@@ -42,10 +45,10 @@ body {
 }
 
 .resume {
-  width: 800px;
+  width: 719px;
   height: auto;
   display: flex;
-  margin: 50px auto;
+  margin: 10px auto;
 }
 
 .resume .resume_left {
@@ -182,7 +185,6 @@ body {
 .resume .resume_right ul li .date {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 15px;
 }
 
 .resume .resume_right ul li .info {
@@ -199,8 +201,8 @@ body {
   position: absolute;
   top: 5px;
   left: -25px;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 2px solid #0bb5f4;
 }
@@ -212,7 +214,7 @@ body {
   top: 14px;
   left: -21px;
   width: 2px;
-  height: 115px;
+  height: 84px;
   background: #0bb5f4;
 }
 
@@ -246,4 +248,8 @@ body {
 
 .resume .resume_right .resume_hobby ul li:last-child:before {
   display: none;
+}
+
+p{
+  margin-bottom: 0;
 }
