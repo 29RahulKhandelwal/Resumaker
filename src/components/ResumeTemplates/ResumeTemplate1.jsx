@@ -19,7 +19,7 @@ function ResumeTemplate1(props,ref) {
                                 </div>}
                                 <div class="resume_bottom">
                                     <div class="resume_item resume_namerole">
-                                        <div class="name">{profileElem.data.fullName}</div>
+                                        <div class="name resume_template1_name">{profileElem.data.fullName}</div>
                                         <div class="role">{profileElem.data.jobRole}</div>
                                     </div>
                                     <div class="resume_item resume_profile">

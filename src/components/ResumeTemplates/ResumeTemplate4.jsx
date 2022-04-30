@@ -19,7 +19,7 @@ function ResumeTemplate4(props,ref) {
                                         <div class="image">
                                             <img src={profileElem.data.imageUrl} alt="Resume_image" />
                                         </div>
-                                        <h2 class="name">{profileElem.data.fullName}</h2>
+                                        <h2 class="resume_template4_name">{profileElem.data.fullName}</h2>
                                         <p class="career">{profileElem.data.jobRole}</p>
                                     </div>
                                     <div class="contact-info">

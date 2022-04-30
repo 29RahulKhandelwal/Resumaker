@@ -63,7 +63,7 @@ body{
     
 }
 
-.name{
+.resume_template4_name{
     font-size: 2rem;
     color: white;
     text-align: center;
@@ -290,7 +290,7 @@ body{
     }
 }
 @media screen and (max-width:390px){
-    .name{
+    .resume_template4_name{
         font-size: 1.5rem;
     }
 }

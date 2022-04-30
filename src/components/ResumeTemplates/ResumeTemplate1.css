@@ -88,6 +88,10 @@
 	letter-spacing: 4px;
 }
 
+.resume_template1_name{
+	text-align: none;
+}
+
 .resume_wrapper .resume_left .resume_namerole .role{
 	color: #84838b;
 }
