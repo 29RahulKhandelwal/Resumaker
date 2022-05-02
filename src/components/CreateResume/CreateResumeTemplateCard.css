@@ -10,6 +10,13 @@ body{
     color: black;
     text-align: center;
     font-family: cursive;
+    width: 120px;
+}
+.download-pdf-btn {
+    margin: 0px 280px;
+    text-align: center;
+    height: 35px;
+    width: 160px;
 }
 .resume-img{
     height: 370px;

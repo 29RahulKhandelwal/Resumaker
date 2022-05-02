@@ -1,0 +1,131 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background: #eee;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #222;
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 50px;
+} */
+.containers {
+    width: 1000px;
+    border-radius: 3px;
+    padding: 30px 50px;
+}
+.headers {
+    margin-bottom: 30px;
+}
+.headers .full-name {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.headers .first-name {
+    font-weight: 700;
+}
+.headers .last-name {
+    font-weight: 300;
+}
+.headers .contact-info {
+    margin-bottom: 20px;
+}
+.headers .email, .headers .phone {
+    color: #999;
+    font-weight: 300;
+}
+.headers .separator {
+    height: 20px;
+    display: inline-block;
+    border-left: 2px solid #999;
+    margin: 0px 10px;
+}
+.headers .position {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.details {
+    line-height: 20px;
+}
+.details .section {
+    margin-bottom: 40px;
+}
+.details .section:last-of-type {
+    margin-bottom: 0px;
+}
+.details .section__title {
+    letter-spacing: 2px;
+    color: #54afe4;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.details .section__list-item {
+    margin-bottom: 40px;
+}
+.details .section__list-item:last-of-type {
+    margin-bottom: 15px;
+}
+.details .lefts, .details .rights {
+    vertical-align: top;
+    display: inline-block;
+}
+.details .lefts {
+    width: 60%;
+}
+.details .rights {
+    width: 95%;
+}
+.details .name {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20px;
+}
+.addr{
+    display: inline-block;
+}
+.duration{
+    float: right;
+    position: relative;
+    right: -300px;
+}
+.skill-name{
+    display: inline-block;
+    width: 22%;
+}
+.details a {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+}
+.details a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+.details .skills__item {
+    margin-bottom: 10px;
+}
+.details .skills__item .rights input {
+    display: none;
+}
+.details .skills__item .rights label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #c3def3;
+    border-radius: 20px;
+    margin-right: 3px;
+}
+.details .skills__item .rights input:checked + label {
+    background: #79a9ce;
+}
