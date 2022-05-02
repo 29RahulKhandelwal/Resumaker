@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
-import "./ResumeTemplate6.css";
+import "./ResumeTemplate8.css";
 
-const ResumeTemplate6 = (props, ref) => {
+const ResumeTemplate8 = (props, ref) => {
     var profileData = props.profileData;
     var educationData = props.educationData;
     var workData = props.workData;
@@ -12,8 +12,8 @@ const ResumeTemplate6 = (props, ref) => {
             {
                 profileData.map((profileElem, profileIndex) => {
                     return (
-                        <div class="wrappers mt-lg-5" key={profileIndex} ref={ref}>
-                            <div class="sidebar-wrapper">
+                        <div class="wrapper8 mt-lg-5" key={profileIndex} ref={ref}>
+                            <div class="sidebar-wrapper8">
                                 <div class="profile-container">
                                 {profileElem?.data?.imageUrl && <img class="profile profile-img" src={profileElem.data.imageUrl} alt="Resume_Img" />}
                                     <h1 class="name">{profileElem.data.fullName}</h1>
@@ -52,7 +52,7 @@ const ResumeTemplate6 = (props, ref) => {
 
                             </div>
 
-                            <div class="main-wrapper">
+                            <div class="main-wrapper8">
                                 
                                 <section class="section summary-section">
                                     <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Career Profile
@@ -288,4 +288,4 @@ const ResumeTemplate6 = (props, ref) => {
         </>
     )
 }
-export default forwardRef(ResumeTemplate6);
+export default forwardRef(ResumeTemplate8);
