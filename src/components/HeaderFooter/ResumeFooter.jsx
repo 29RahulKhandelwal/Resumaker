@@ -1,10 +1,14 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./ResumeFooter.css";
+import { LinksAction } from "../../actions";
+import { ProgressAction } from "../../actions";
 const paths=["templates","profile","education","work","skills","projects"];
 
 export default function ResumeFooter(){
-    const [progressValue,setProgressValue]=useState(0);
+    const dispatch=useDispatch();
+    const [progressValue,setProgressValue]=useState(20);
     const navigate=useNavigate()
     const [path,setPath]=useState(0);
     const changePath=(numb,progress)=>{
@@ -12,16 +16,30 @@ export default function ResumeFooter(){
         const index=paths.findIndex((item)=>item===currentLocation)
         if(index>=0){
             setPath(paths[index+parseInt(numb)])
+            dispatch(LinksAction(paths[index+parseInt(numb)]));
             setProgressValue(progressValue+progress)
+            dispatch(ProgressAction(progressValue+progress));
             navigate(`/resume-generator/${paths[index+parseInt(numb)]}`);
         }
     }
+    const linkData=useSelector((state)=>state.linkReducer.linkData);
+    const progressData=useSelector((state)=>state.progressReducer.progressData);
+    console.log(progressData)
     const prevPath=()=>{
         changePath(-1,-20)
     }
     const nextPath=()=>{
         changePath(1,20)
     }
+    
+    useEffect(()=>{
+        const index=paths.findIndex((item)=>item===linkData)
+        if(index>=0){
+            setProgressValue(index*20)
+        }
+        console.log(index)
+        console.log(linkData)
+    },[linkData,progressData])
 
     useEffect(()=>setPath(window.location.pathname.split("/").pop()),[])
 

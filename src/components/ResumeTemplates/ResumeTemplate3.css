@@ -25,7 +25,7 @@
 	padding: 0 20px;
 }
 
-.right{
+.resume3_right{
 	width: calc(100% - 250px);
 }
 
@@ -158,26 +158,26 @@
 	color: #9153c9;
 }
 
-.header{
+.resume3_header{
 	background: #292b2f;
 	padding: 15px 30px;
 	color: #fff;
-	height: 306px;
+	height: 305px;
 }
 
-.header .name{
+.resume3_header .name{
 	font-size: 52px;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #3525af;
 }
 
-.header .role{
+.resume3_header .role{
 	font-weight: 300;
 	font-size: 20px;
 }
 
-.header .about{
+.resume3_header .resume3_about{
 	margin-top: 20px;
 	line-height: 26px;
 }

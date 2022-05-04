@@ -31,13 +31,13 @@ const ResumeTemplate13 = (props,ref) => {
                             <h6>{profileElem.data.jobRole}</h6>
                         </div>
                         <div class="details row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col6">
                                 <div class="abouts pr">
                                     <h5>About</h5>
                                     <p>{profileElem.data.about}</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col6">
                                 <div class="contact pl">
                                     <h5>Contact Details</h5>
                                     <ul>
@@ -52,7 +52,7 @@ const ResumeTemplate13 = (props,ref) => {
                         {workData.map((workElem, workIndex) => {
                             return (
                                 <div class="details row" key={workIndex}>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col6">
                                         <h5>Experience</h5>
                                         {workElem?.data[0] && <div class="experiance pr">
                                             <h6>{workElem.data[0].jobTitle}</h6>
@@ -88,7 +88,7 @@ const ResumeTemplate13 = (props,ref) => {
                                             </ul>
                                         </div>}
                                     </div>
-                                    <div class="col-md-6 space">
+                                    <div class="col-md-6 col6 space">
                                     {workElem?.data[1] && <div class="experiance pl">
                                             <h6>{workElem.data[1].jobTitle}</h6>
                                             <p>{workElem.data[1].companyName}, {workElem.data[1].jobLocation}({workElem.data[1].startDate} - {workElem.data[1].endDate})</p>
@@ -117,7 +117,7 @@ const ResumeTemplate13 = (props,ref) => {
                         {projectData.map((projectElem, projectIndex) => {
                             return (
                             <div class="details row" key={projectIndex}>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col6">
                                     {projectElem?.data[0] && <div class="experiance pr">
                                         <h6 class="rt6">{projectElem.data[0].projectName} ({projectElem.data[0].startDate} - {projectElem.data[0].endDate})</h6>
                                         <p>{projectElem.data[0].projectLink && <a href={projectElem.data[0].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}</p>
@@ -127,7 +127,7 @@ const ResumeTemplate13 = (props,ref) => {
                                         </ul>
                                     </div>}
                                 </div>
-                                <div class="col-md-6 space-project">
+                                <div class="col-md-6 col6 space-project">
                                     {projectElem?.data[1] && <div class="experiance pl">
                                         <h6 class="rt6">{projectElem.data[1].projectName} ({projectElem.data[1].startDate} - {projectElem.data[1].endDate})</h6>
                                         <p>{projectElem.data[1].projectLink && <a href={projectElem.data[1].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}</p>
@@ -137,7 +137,7 @@ const ResumeTemplate13 = (props,ref) => {
                                         </ul>
                                     </div>}
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col6">
                                     {projectElem?.data[2] && <div class="experiance pr">
                                         <h6 class="rt6">{projectElem.data[2].projectName} ({projectElem.data[2].startDate} - {projectElem.data[2].endDate})</h6>
                                         <p>{projectElem.data[2].projectLink && <a href={projectElem.data[2].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}</p>
@@ -147,7 +147,7 @@ const ResumeTemplate13 = (props,ref) => {
                                         </ul>
                                     </div>}
                                 </div>
-                                <div class="col-md-6 space-project">
+                                <div class="col-md-6 col6 space-project">
                                     {projectElem?.data[3] && <div class="experiance pl">
                                         <h6 class="rt6">{projectElem.data[3].projectName} ({projectElem.data[3].startDate} - {projectElem.data[3].endDate})</h6>
                                         <p>{projectElem.data[3].projectLink && <a href={projectElem.data[3].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}</p>
@@ -157,7 +157,7 @@ const ResumeTemplate13 = (props,ref) => {
                                         </ul>
                                     </div>}
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col6">
                                     {projectElem?.data[4] && <div class="experiance pr">
                                         <h6 class="rt6">{projectElem.data[4].projectName} ({projectElem.data[4].startDate} - {projectElem.data[4].endDate})</h6>
                                         <p>{projectElem.data[4].projectLink && <a href={projectElem.data[4].projectLink} class="project-anchor">ProjectLink <i class="fa-solid fa-up-right-from-square"></i></a>}</p>
@@ -172,7 +172,7 @@ const ResumeTemplate13 = (props,ref) => {
                         <div class="details row">
                         {educationData.map((educationElem, educationIndex) => {
                             return (
-                                <div class="col-md-6" key={educationIndex}>
+                                <div class="col-md-6 col6" key={educationIndex}>
                                     {educationElem?.data[0] && <div class="award educa pr">
                                         <h5>Education</h5>
                                         <h6>{educationElem?.data[0]?.schoolName},  {educationElem?.data[0]?.schoolLocation}  ({educationElem?.data[0]?.educationStartDate} - {educationElem?.data[0]?.educationEndDate})</h6>
@@ -203,7 +203,7 @@ const ResumeTemplate13 = (props,ref) => {
                             )})}
                             {skillData.map((skillElem, skillIndex) => {
                                 return (
-                                    <div class="col-md-6" key={skillIndex}>
+                                    <div class="col-md-6 col6" key={skillIndex}>
                                         <div class="skill pl">
                                             <h5>Skills</h5>
                                             <ul>

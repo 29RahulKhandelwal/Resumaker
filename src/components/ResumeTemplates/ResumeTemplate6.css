@@ -31,7 +31,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
     
-    .sidebar-wrapper6 {
+    .sidebar-wrapper {
     background: #42A8C0;
     position: absolute;
     right: 0;
@@ -234,46 +234,4 @@
     background: #68bacd;
     }
     
-    .footer {
-    padding: 30px;
-    padding-top: 60px;
-    }
-    .footer .copyright {
-    line-height: 1.6;
-    color: #545E6C;
-    font-size: 13px;
-    }
-    .footer .fa-heart {
-    color: #fb866a;
-    }
-    
-    
-    /* @media (max-width: 767.98px) {
-    .sidebar-wrapper {
-        position: static;
-        width: inherit;
-    }
-    
-    .main-wrapper {
-        padding: 30px;
-    }
-    
-    .main-wrapper .time {
-        position: static;
-        display: block;
-        margin-top: 5px;
-    }
-    
-    .main-wrapper .upper-row {
-        margin-bottom: 0;
-    }
-    }
-    @media (min-width: 992px) {
-    .skillset .level-title {
-        display: inline-block;
-        float: left;
-        width: 30%;
-        margin-bottom: 0;
-    }
-    } */
     

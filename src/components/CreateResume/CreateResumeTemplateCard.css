@@ -6,11 +6,16 @@ body{
     margin: 10px 0px;
     text-align: -webkit-center;
 }
+.sidelinkshover{
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+}
 .para-text{
     color: black;
     text-align: center;
     font-family: cursive;
-    width: 120px;
+    width: 150px;
 }
 .download-pdf-btn {
     margin: 0px 280px;

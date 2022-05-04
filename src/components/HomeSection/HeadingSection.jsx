@@ -7,7 +7,7 @@ export default function HeadingSection(){
     return (
         <div className="col-lg-4 col-md-12 first-row">
             <div class="mt-4 p-5 text-black main-heading">
-                <h1>FREE RESUME MAKER FOR YOUR JOB!</h1>
+                <h1 className="homeheading">FREE RESUME MAKER FOR YOUR JOB!</h1>
                 <p className="points"><img className="check-mark" src={checkmark} alt="check-mark" /> NOW, NO MORE TENSION WHEN RESUMAKER IS THERE!</p>
                 <p className="points"><img className="check-mark" src={checkmark} alt="check-mark" /> JUST ENTER YOUR DETAILS AND YOUR RESUME IS READY</p>
                 <p className="points"><img className="check-mark" src={checkmark} alt="check-mark" /> IN REAL TIME YOUR RESUME WILL BE CREATED ON THE RIGHT SIDE</p>

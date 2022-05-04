@@ -38,3 +38,19 @@ export const ProjectAction=(data)=>{
         }
     }
 }
+export const LinksAction=(data)=>{
+    return {
+        type:"LINKS",
+        payload:{
+            data:data
+        }
+    }
+}
+export const ProgressAction=(data)=>{
+    return {
+        type:"PROGRESS_ACTION",
+        payload:{
+            data:data
+        }
+    }
+}

@@ -114,8 +114,8 @@ function ResumeTemplate3(props,ref) {
                                             </div>
                                         )})}
                                 </div>
-                                <div class="right">
-                                    <div class="header">
+                                <div class="resume3_right">
+                                    <div class="resume3_header">
                                         <div class="name_role">
                                             <div class="name">
                                             {profileElem.data.fullName}
@@ -124,7 +124,7 @@ function ResumeTemplate3(props,ref) {
                                             {profileElem.data.jobRole}
                                             </div>
                                         </div>
-                                        <div class="about">
+                                        <div class="resume3_about">
                                         {profileElem.data.about}
                                         </div>
                                     </div>

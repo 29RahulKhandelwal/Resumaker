@@ -49,7 +49,7 @@ function ResumeTemplate1(props,ref) {
                                     </div>
                                     {skillData.map((skillElem, skillIndex) => {
                                         return (
-                                            <div class="resume_item resume_skills">
+                                            <div class="resume_item resume_skills" key={skillIndex}>
                                                 <div class="resume_title">Skills</div>
                                                 <div class="resume_info">
                                                     {skillElem?.data[0] && <div class="skills_list">
