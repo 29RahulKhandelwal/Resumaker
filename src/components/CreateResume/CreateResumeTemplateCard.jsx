@@ -30,7 +30,7 @@ export default function CreateResumeTemplateCard(props) {
         <div class="container">
             <div class="row">
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate1} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">

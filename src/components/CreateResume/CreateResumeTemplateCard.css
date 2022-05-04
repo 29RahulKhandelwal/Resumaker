@@ -42,6 +42,9 @@ body{
         margin-top: 140px;
     }
 }
+.card{
+    width: 16.5rem;
+}
 
 @media (min-width: 480px) and (max-width: 767px) {
     .template-img{
@@ -50,4 +53,10 @@ body{
     h3{
         margin-top: 140px;
     } 
+    .card{
+        width: 30.5rem;
+    }
+    .resume-img{
+        height: 650px;
+    }
   }
