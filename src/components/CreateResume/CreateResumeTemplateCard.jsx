@@ -40,7 +40,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate2} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                         <Link to="/resume-generator/profile">
@@ -50,7 +50,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate3} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -60,7 +60,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate4} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -70,7 +70,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate5} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -80,7 +80,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate6} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -90,7 +90,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate7} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -100,7 +100,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate8} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -110,7 +110,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate9} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -120,7 +120,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate10} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -130,7 +130,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate11} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
@@ -140,7 +140,7 @@ export default function CreateResumeTemplateCard(props) {
                     </div>
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
-                    <div className="card" style={{width: '16.5rem'}}>
+                    <div className="card">
                         <img src={resumeTemplate12} className="card-img-top resume-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
