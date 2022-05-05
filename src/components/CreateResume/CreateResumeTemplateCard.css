@@ -51,7 +51,7 @@ body{
     }
     .scroll-bar{
         overflow-y: scroll;
-        height: 4.5%;
+        height: 10%;
     }
   }
 
