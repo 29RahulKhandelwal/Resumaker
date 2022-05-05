@@ -49,6 +49,10 @@ body{
     .card{
         width: 30.5rem;
     }
+    .scroll-bar{
+        overflow-y: scroll;
+        height: 4.5%;
+    }
   }
 
 @media (min-width: 480px) and (max-width: 767px) {
