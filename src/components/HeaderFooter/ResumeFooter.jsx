@@ -25,6 +25,7 @@ export default function ResumeFooter(){
     }
     const linkData=useSelector((state)=>state.linkReducer.linkData);
     const progressData=useSelector((state)=>state.progressReducer.progressData);
+    const {previewData}=useSelector((state)=>state.previewReducer);
     console.log(progressData)
     const prevPath=()=>{
         changePath(-1,-20)
@@ -47,6 +48,9 @@ export default function ResumeFooter(){
     function handlePreviewClick(){
         dispatch(PreviewAction(true))
     }
+    function handlePreviewClickBack(){
+        dispatch(PreviewAction(false))
+    }
 
     return (
         <Fragment>
@@ -55,7 +59,8 @@ export default function ResumeFooter(){
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={progressValue} aria-valuemin="0" aria-valuemax="100" style={{width: `${progressValue}%`}}></div>
                 </div>
-                <button type="button" class="btn btn-outline-info btn-sm preview-btn create-button" onClick={handlePreviewClick}>Preview</button>
+                {previewData===false && <button type="button" class="btn btn-outline-info btn-sm preview-btn create-button" onClick={handlePreviewClick}>Preview</button>}
+                {previewData===true && <button type="button" class="btn btn-outline-info btn-sm preview-btn create-button" onClick={handlePreviewClickBack}>Back</button>}
                 <button type="button" class="btn btn-outline-info btn-sm next-btn create-button" onClick={nextPath} disabled={path==="projects"} >Next</button>
             </div>
         </Fragment>
