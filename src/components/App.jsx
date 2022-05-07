@@ -52,7 +52,7 @@ export default function App() {
                         <Route exact path="/resume-generator/projects" element={<Project/>} />
                     </Routes>
                     </div>}
-                    {previewData===true && <div className="col col-lg-6 col-border scroll-bar previewDisplay">
+                    {previewData===true && <div className="col col-lg-6 col-md-12 col-border scroll-bar previewDisplay">
                         <Preview />
                     </div>}
                     <ResumeFooter />

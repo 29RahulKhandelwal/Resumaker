@@ -122,6 +122,11 @@ input[type=number]{
     body{
         height: 99%;
     }
+    .previewDisplay{
+        height: 95%;
+        width: 100%;
+    }
+    
 }
 @media only screen and (min-width:1080px){
     .previewDisplay{
