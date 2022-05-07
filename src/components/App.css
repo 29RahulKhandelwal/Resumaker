@@ -123,7 +123,7 @@ input[type=number]{
         height: 99%;
     }
 }
-@media only screen and (min-width:960px){
+@media only screen and (min-width:1080px){
     .previewDisplay{
         display: none;  
     }       
