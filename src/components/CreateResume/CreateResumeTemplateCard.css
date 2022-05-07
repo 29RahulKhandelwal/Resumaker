@@ -18,10 +18,7 @@ body{
     width: 150px;
 }
 .download-pdf-btn {
-    margin: 0px 280px;
-    text-align: center;
-    height: 35px;
-    width: 160px;
+    margin: -10px;
 }
 .resume-img{
     height: 370px;

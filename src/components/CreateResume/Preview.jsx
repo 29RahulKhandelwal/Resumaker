@@ -34,7 +34,9 @@ const Preview = () => {
     const skillData=useSelector((state)=>state.skillReducer.skillData);
     return (
         <>
-            <button className="btn btn-outline-primary btn-md create-button para-text template-button download-pdf-btn" onClick={handlePrint}>Download PDF</button>
+            <div className='text-center download-pdf-btn'>
+                <button className="btn btn-outline-primary btn-md create-button para-text template-button text-center" onClick={handlePrint}>Download PDF</button>
+            </div>
             {clicked === "Template1" && <ResumeTemplate1 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef} />}
             {clicked === "Template2" && <ResumeTemplate2 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef} />}
             {clicked === "Template3" && <ResumeTemplate3 profileData={profileData} educationData={educationData} workData={workData} projectData={projectData} skillData={skillData} ref={componentRef}  />}
