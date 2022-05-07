@@ -15,4 +15,7 @@
     .progress{
         display: none;
     }
+    .resume-footer{
+        position: sticky;
+    }
 }
