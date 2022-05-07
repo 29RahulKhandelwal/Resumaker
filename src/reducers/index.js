@@ -6,6 +6,7 @@ import skillReducer from "./skillReducer";
 import projectReducer from "./projectReducer";
 import linkReducer from "./linkReducer";
 import progressReducer from "./progressReducer";
+import previewReducer from "./previewReducer";
 
 const rootReducer=combineReducers({
     profileReducer,
@@ -14,7 +15,8 @@ const rootReducer=combineReducers({
     skillReducer,
     projectReducer,
     linkReducer,
-    progressReducer
+    progressReducer,
+    previewReducer
 });
 
 export default rootReducer;

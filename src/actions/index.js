@@ -54,3 +54,11 @@ export const ProgressAction=(data)=>{
         }
     }
 }
+export const PreviewAction=(data)=>{
+    return {
+        type:"PREVIEW_ACTION",
+        payload:{
+            data:data
+        }
+    }
+}

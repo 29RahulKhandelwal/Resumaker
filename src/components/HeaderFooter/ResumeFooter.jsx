@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./ResumeFooter.css";
 import { LinksAction } from "../../actions";
 import { ProgressAction } from "../../actions";
+import { PreviewAction } from "../../actions";
 const paths=["templates","profile","education","work","skills","projects"];
 
 export default function ResumeFooter(){
@@ -43,6 +44,10 @@ export default function ResumeFooter(){
 
     useEffect(()=>setPath(window.location.pathname.split("/").pop()),[])
 
+    function handlePreviewClick(){
+        dispatch(PreviewAction(true))
+    }
+
     return (
         <Fragment>
             <div className="resume-footer">
@@ -50,6 +55,7 @@ export default function ResumeFooter(){
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={progressValue} aria-valuemin="0" aria-valuemax="100" style={{width: `${progressValue}%`}}></div>
                 </div>
+                <button type="button" class="btn btn-outline-info btn-sm preview-btn create-button" onClick={handlePreviewClick}>Preview</button>
                 <button type="button" class="btn btn-outline-info btn-sm next-btn create-button" onClick={nextPath} disabled={path==="projects"} >Next</button>
             </div>
         </Fragment>

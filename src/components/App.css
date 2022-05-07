@@ -122,4 +122,9 @@ input[type=number]{
     body{
         height: 99%;
     }
-  }
+}
+@media only screen and (min-width:820px){
+    .previewDisplay{
+        display: none;  
+    }       
+}
