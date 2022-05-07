@@ -42,7 +42,7 @@ export default function App() {
                     {/* {previewData ? <div className="col col-12 position-fixed top-0 left-0 scroll-bar bg-light" style={{zIndex:"10000",maxWidth:"100%",transform:"scale(0.9)"}}>
                         <Preview />
                     </div>} */}
-                    {previewData===false && <div className="col col-lg-5 col-md-12 col-border scroll-bar previewDisplay">
+                    {previewData===false && <div className="col col-lg-5 col-md-12 col-border scroll-bar">
                     <Routes>
                         <Route exact path="/resume-generator/templates" element={<Template />} />
                         <Route exact path="/resume-generator/profile" element={<Profile/>} />
