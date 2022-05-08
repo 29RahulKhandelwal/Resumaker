@@ -59,8 +59,8 @@ export default function ResumeFooter(){
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={progressValue} aria-valuemin="0" aria-valuemax="100" style={{width: `${progressValue}%`}}></div>
                 </div>
-                {previewData===false && <button type="button" class="btn btn-info btn-sm preview-btn create-button" onClick={handlePreviewClick}>Preview</button>}
-                {previewData===true && <button type="button" class="btn btn-outline-info btn-sm preview-btn create-button" onClick={handlePreviewClickBack}>Back</button>}
+                {previewData===false && <button type="button" class="btn btn-primary btn-lg preview-btn create-button" onClick={handlePreviewClick} style={{color:"white"}}>Preview</button>}
+                {previewData===true && <button type="button" class="btn btn-primary btn-lg preview-btn create-button" onClick={handlePreviewClickBack} style={{color:"white"}}>Back</button>}
                 <button type="button" class="btn btn-info btn-sm next-btn create-button" onClick={nextPath} disabled={path==="projects"} >Next</button>
             </div>
         </Fragment>

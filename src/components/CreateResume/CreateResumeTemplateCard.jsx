@@ -31,7 +31,7 @@ export default function CreateResumeTemplateCard(props) {
             <div class="row">
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate1} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate1} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template1")}>Template 1</button>
@@ -41,7 +41,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate2} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate2} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                         <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template2")}>Template 2</button>
@@ -51,7 +51,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate3} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate3} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template3")}>Template 3</button>
@@ -61,7 +61,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate4} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate4} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button"  onClick={()=>handleClick("Template4")}>Template 4</button>
@@ -71,7 +71,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate5} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate5} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template5")}>Template 5</button>
@@ -81,7 +81,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate6} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate6} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template6")}>Template 6</button>
@@ -91,7 +91,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate7} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate7} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template7")}>Template 7</button>
@@ -101,7 +101,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate8} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate8} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template8")}>Template 8</button>
@@ -111,7 +111,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate9} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate9} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template9")}>Template 9</button>
@@ -121,7 +121,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate10} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate10} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template10")}>Template 10</button>
@@ -131,7 +131,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate11} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate11} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template11")}>Template 11</button>
@@ -141,7 +141,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate12} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate12} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template12")}>Template 12</button>
@@ -151,7 +151,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate13} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate13} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template13")}>Template 13</button>
@@ -161,7 +161,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate14} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate14} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template14")}>Template 14</button>
@@ -171,7 +171,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate15} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate15} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template15")}>Template 15</button>
@@ -181,7 +181,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate16} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate16} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template16")}>Template 16</button>
@@ -191,7 +191,7 @@ export default function CreateResumeTemplateCard(props) {
                 </div>
                 <div className="col col-lg-6 col-md-12 card-col">
                     <div className="card">
-                        <img src={resumeTemplate17} className="card-img-top resume-img" alt="..." />
+                        <img src={resumeTemplate17} className="card-img-top resume-img responsive-img" alt="..." />
                         <div className="card-body">
                             <Link to="/resume-generator/profile">
                                 <button className="btn btn-outline-primary btn-md create-button para-text template-button" onClick={()=>handleClick("Template17")}>Template 17</button>
