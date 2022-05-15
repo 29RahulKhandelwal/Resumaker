@@ -75,8 +75,7 @@ a{
 }
 
 .circle{
-    display: inline-block;
-    margin: 0px -35px;
+    margin: 10px
 }
 
 .circle-button{
@@ -94,7 +93,7 @@ a{
 
 .addremove{
     display: inline-flex;
-    margin: 10px 70px;
+    margin: 10px 73px;
     width: 75%;
     justify-content: center;
 }

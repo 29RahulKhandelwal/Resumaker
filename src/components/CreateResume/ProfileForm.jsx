@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Input from "../UI/Input";
 import { ProfileAction } from "../../actions";
+import Button from "../UI/Button";
 
 const getProfileDataFromLocalStorage=()=>{
     let data=localStorage.getItem("profile_data");
@@ -33,6 +34,18 @@ export default function ProfileForm(){
             }
         })
     }
+    function handleClear(){
+        setProfileData({
+            fullName:"",
+            email:"",
+            phn:"",
+            location:"",
+            link:"",
+            jobRole:"",
+            imageUrl:"",
+            about:""
+        });
+    }
     useEffect(()=>{
         dispatch(ProfileAction(profileData))
         localStorage.setItem("profile_data",JSON.stringify(profileData))
@@ -48,6 +61,7 @@ export default function ProfileForm(){
             <Input label="PhoneNumber" id="PhoneNumber" text="Phone Number" type="number" name="phn" value={profileData.phn} onChange={handleChange} placeholder="+324 4445678" />
             <Input label="Location" id="Location" text="Location" type="text" name="location" value={profileData.location} onChange={handleChange} placeholder="21 Street, Texas USA" />
             <Input label="Link" id="Link" text="Link" type="url" name="link" value={profileData.link} onChange={handleChange} placeholder="www.stephen.com" />
+            <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Clear Text" onClick={handleClear} />
         </Fragment>
     )
 }

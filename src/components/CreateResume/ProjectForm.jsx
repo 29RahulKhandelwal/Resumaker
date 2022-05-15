@@ -58,6 +58,24 @@ export default function ProjectForm(){
         setProjectData(projectDataList)
     }
 
+    function handleClear(){
+        setProjectData([{
+            projectName:"",
+            projectDescription:"",
+            projectLink:"",
+            startDate:"",
+            endDate:"",
+            projectLanguage1:"",
+            projectLanguage2:"",
+            projectLanguage3:"",
+            projectLanguage4:"",
+            projectLanguage5:"",
+            projectLanguage6:"",
+            projectLanguage7:"",
+            projectLanguage8:"",
+        }])
+    }
+
     useEffect(()=>{
         dispatch(ProjectAction(projectData))
         localStorage.setItem("project_data",JSON.stringify(projectData))
@@ -68,6 +86,7 @@ export default function ProjectForm(){
         <Fragment>
             {projectData.map((data,index)=>{
                 return(
+                    <>
                     <div key={index}>
                         <Input label="ProjectName" id="ProjectName" text="Project Name" type="text" name="projectName" placeholder="Resumaker" value={data.projectName} onChange={event=>handleChange(event,index)} />
                         <Input label="ProjectDescription" id="ProjectDescription" text="Project Description" type="text" name="projectDescription" placeholder="Resumaker is a online application for creating resume just by entering your details." value={data.projectDescription} onChange={event=>handleChange(event,index)} />
@@ -87,6 +106,8 @@ export default function ProjectForm(){
                             {projectData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Project"  onClick={()=>handleDeleteInput(index)} />}
                         </div>
                     </div>
+                    <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Clear Text" onClick={handleClear} />
+                    </>
                 )
             })}
         </Fragment>

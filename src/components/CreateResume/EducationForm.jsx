@@ -48,6 +48,18 @@ export default function EducationForm(){
         setEducationData(data);
     }
 
+    function handleClear(){
+        setEducationData([{
+            schoolName:"",
+            schoolLocation:"",
+            percentage:"",
+            major:"",
+            cgpa:"",
+            educationStartDate:"",
+            educationEndDate:""
+        }])
+    }
+
     useEffect(()=>{
         dispatch(EducationAction(educationData))
         localStorage.setItem("education_data",JSON.stringify(educationData))
@@ -70,6 +82,7 @@ export default function EducationForm(){
                             {educationData.length -1 === index && educationData.length < 5 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add School" onClick={handleAddMoreEducation} />}
                             {educationData.length !== 1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove School" onClick={()=>handleDeleteMoreEducation(index)} />}
                         </div>
+                        <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Clear Text" onClick={handleClear} />
                     </div>
                 )
             })}

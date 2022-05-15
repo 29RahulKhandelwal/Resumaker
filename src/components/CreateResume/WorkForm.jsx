@@ -51,6 +51,21 @@ export default function WorkForm(){
         workDataList.splice(index,1);
         setWorkData(workDataList);
     }
+
+    function handleClear(){
+        setWorkData([{
+            companyName:"",
+            jobTitle:"",
+            jobLocation:"",
+            startDate:"",
+            endDate:"",
+            jobResponsibility1:"",
+            jobResponsibility2:"",
+            jobResponsibility3:"",
+            jobResponsibility4:"",
+            jobResponsibility5:"",
+        }])
+    }
     
     useEffect(()=>{
         dispatch(WorkAction(workData))
@@ -77,6 +92,7 @@ export default function WorkForm(){
                             {workData.length -1 === index && workData.length < 5 &&  <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Add Work" onClick={handleAddInput} />}
                             {workData.length !==1 && <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Remove Work"  onClick={()=>handleRemoveInput(index)} />}
                         </div>
+                        <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Clear Text" onClick={handleClear} />
                     </div>
                 )
             })}

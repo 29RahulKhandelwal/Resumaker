@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import CircleButton from "../UI/CircleButton";
 import ShortInput from "../UI/ShortInput";
+import Button from "../UI/Button";
 import { SkillAction } from "../../actions";
 import { useDispatch } from "react-redux";
 
@@ -33,6 +34,12 @@ export default function SkillsForm(){
         setSkillNameData(SkillList);
     }
 
+    function handleClear(){
+        setSkillNameData([{
+            skillName:""
+        }])
+    }
+
     useEffect(()=>{
         dispatch(SkillAction(skillNameData))
         localStorage.setItem("skills_data",JSON.stringify(skillNameData))
@@ -44,10 +51,11 @@ export default function SkillsForm(){
             {skillNameData.map((skill,index)=>(
                 <div key={index}>
                     <ShortInput label="SkillName" id="SkillName" text="Skill Name" type="text" name="skillName" value={skill.skillName}  onChange={(e)=>handleChange(e,index)} placeholder="Javascript" />
-                    <div className="circle">
+                    <div className="center circle">
                         {skillNameData.length -1 === index && skillNameData.length < 10 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="+" onClick={handleSkillAdd}  />}
                         {skillNameData.length > 1 && <CircleButton type="button" class="btn btn-outline-primary btn-md btn-circle" text="-" onClick={handleSkillDelete} />}
                     </div>
+                    <Button type="button" class="btn btn-outline-primary btn-md btn-school" text="Clear Text" onClick={handleClear} />
                 </div>
             ))}
         </Fragment>
